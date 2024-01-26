@@ -60,7 +60,7 @@ export default function About() {
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://drive.google.com/file/d/128uH4p-CKnE4xaSf7PemkZkysK01vmZJ/view?usp=sharing  "
+        href="https://drive.google.com/file/d/128uH4p-CKnE4xaSf7PemkZkysK01vmZJ/view?usp=sharing"
       >
         View My Resume
       </a>
