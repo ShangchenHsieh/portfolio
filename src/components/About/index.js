@@ -25,7 +25,7 @@ export default function About() {
       <div className="flex flex-row  gap-6 ml-8">
         <div className="flex-col mt-14 flex flex-auto w-64 gap-6">
           <h3 className="text-3xl font-medium" data-aos={"fade-right"}>
-            I'm <span className="text-yellow-600">Shang-chen Hsieh,</span> currently a full-stack developer
+            I'm <span className="text-yellow-600">Shang-chen Hsieh,</span> a full-stack developer
           </h3>
           <p
             className="pt-5 leading-7 text-slate-900 text-justify"

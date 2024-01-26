@@ -6,6 +6,7 @@ import FileDownloadDoneIcon from "@mui/icons-material/FileDownloadDone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
+
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -79,7 +80,7 @@ export default function Contact() {
       className="flex text-center flex-col gap-12 mt-10 min-h-screen overflow-hidden"
     >
       <div className="text-5xl font-bold" data-aos={"fade"}>
-        Contact
+        CONTACTS
       </div>
       <div className="flex flex-row  ">
         <div className="flex-auto  w-32 pl-10 overflow-visible">
@@ -189,16 +190,16 @@ export default function Contact() {
               autoplay
               loop
               mode="bounce"
-              src="https://assets9.lottiefiles.com/packages/lf20_3rqwsqnj.json"
+              src="https://lottie.host/3862767a-98bb-416c-8abc-92a27f9499af/okjakj42f3.json"
               style={{ width: "350px" }}
             />
           </div>
           <div data-aos={"slide-up"} className="text-center">
-            <div className="text-center mt-2 text-3xl font-bold">Follow Me</div>
+            <div className="text-center mt-2 text-3xl font-bold">Connect with Me</div>
             <div className="text-white flex flex-row gap-7 w-fit mx-auto pt-4">
               <div
                 onClick={() =>
-                  window.open("https://github.com/khmorad", "_blank")
+                  window.open("https://github.com/ShangchenHsieh", "_blank")
                 }
               >
                 <GitHubIcon className="cursor-pointer hover:scale-105" />
@@ -206,7 +207,7 @@ export default function Contact() {
               <div
                 onClick={() =>
                   window.open(
-                    "https://www.linkedin.com/in/kmoradpour/",
+                    "https://www.linkedin.com/in/shangchen-hsieh-598167222/",
                     "_blank"
                   )
                 }
@@ -217,7 +218,7 @@ export default function Contact() {
               <div
                 onClick={() =>
                   window.open(
-                    "",
+                    "https://www.instagram.com/shawn.h___/",
                     "_blank"
                   )
                 }

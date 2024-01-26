@@ -14,7 +14,7 @@ export default function Slidebar() {
         <div data-aos="slide-down">
           <img
             src={require("../assets/images/MyImage.webp")}
-            alt="Khashayar Morapdour"
+            alt="Shangchen Hsieh"
             className="rounded-full border-solid cursor-pointer  border-[3px] border-stone-600 min-h-fit mx-auto  max-w-[190px]"
           />
           <h3 className="text-white name py-4 font-medium ">
@@ -79,7 +79,7 @@ export default function Slidebar() {
       >
         <div
           onClick={() =>
-            window.open("https://github.com/khmorad", "_blank")
+            window.open("https://github.com/ShangchenHsieh", "_blank")
           }
         >
           <GitHubIcon className="cursor-pointer hover:scale-105" />
@@ -88,7 +88,7 @@ export default function Slidebar() {
         <div
           onClick={() =>
             window.open(
-              "https://www.linkedin.com/in/kmoradpour/",
+              "https://www.linkedin.com/in/shangchen-hsieh-598167222/",
               "_blank"
             )
           }
@@ -98,7 +98,7 @@ export default function Slidebar() {
         </div>
         <div
           onClick={() =>
-            window.open("", "_blank")
+            window.open("https://www.instagram.com/shawn.h___", "_blank")
           }
         >
           {" "}

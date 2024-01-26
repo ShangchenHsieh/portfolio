@@ -24,10 +24,10 @@ export default function Home() {
         <Typewriter
           options={{
             strings: [
-              "👋 I'm Khashayar Moradpour",
-              "I'm an aspiring Software Developer!",
-              "I'm a 3rd yr Computer science in San Jose State University",
-              "You can 📲 me through discord or ✉️",
+              "👋 I'm Shangchen Hsieh",
+              "I'm an backend Software Developer!",
+              "I'm a senior Computer science in San Jose State University",
+              "You can contact me through emails or LinkedIn",
             ],
             delay: 48,
             pauseFor: 1500,
