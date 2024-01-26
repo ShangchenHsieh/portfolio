@@ -20,7 +20,7 @@ export default function Contact() {
     const { username, email, message } = e.target.elements;
    // const { REACT_APP_SERVICEID, REACT_APP_TEMPLATE, REACT_APP_PUBLICKEY } =
      // process.env;
-   const   REACT_APP_SERVICEID="service_k1wrwub"
+   const   REACT_APP_SERVICEID="service_vlur9ss"
    const REACT_APP_TEMPLATE="template_y1elat9"
    const REACT_APP_PUBLICKEY="jRGIvist-rp3ksJUP"
     console.log({

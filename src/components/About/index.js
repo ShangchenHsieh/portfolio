@@ -7,7 +7,7 @@ export default function About() {
   
   const getDate = () => {
     //changing the age without hard coding it
-    var dob = new Date("09/11/2000");
+    var dob = new Date("07/02/2001");
     var month_diff = Date.now() - dob.getTime();
     var age_dt = new Date(month_diff);
     var year = age_dt.getUTCFullYear();
@@ -25,21 +25,22 @@ export default function About() {
       <div className="flex flex-row  gap-6 ml-8">
         <div className="flex-col mt-14 flex flex-auto w-64 gap-6">
           <h3 className="text-3xl font-medium" data-aos={"fade-right"}>
-            I'm <span className="text-yellow-600">Khashayar Morapdour,</span> an aspiring Software Developer
+            I'm <span className="text-yellow-600">Shang-chen Hsieh,</span> currently a full-stack developer
           </h3>
           <p
             className="pt-5 leading-7 text-slate-900 text-justify"
             data-aos={"fade-right"}
           >
-            Hello! My name is Khashayar Moradpour and I am {getDate()}-years-old computer science student at San Jose State University with a deep passion for developing web applications. Alongside my studies, I excel in sports and enjoy playing the piano. My focus on software engineering has instilled in me a keen eye for detail and the ability to thrive under pressure. I take pride in creating user-friendly applications that seamlessly blend design and functionality. 
+            Hello! My name is Shangchen Hsieh and I am {getDate()}-years-old computer science senior student at San Jose State University passionate in backend development and Artifical Intelligence. 
+            Aligning with my profession, I also customize setup peripheral, like custom PC and custom keyboard. Outside of my profession, I enjoy working out  to stay active and dive deep into the competitive gaming industries.  
           </p>
           <p
             className="text-justify leading-7 text-slate-900"
             data-aos={"fade-right"}
             style={{ paddingBottom: '80px' }}
           >
-            I am currently looking for Internships. I have over 5 years exprience in coding and I have attended many <a className= "text-yellow-600"href="https://devpost.com/woddyowl">hackathons</a> which in the past I have worked with React.js, Next.js, Python and many more mentioned on my <a className= "text-yellow-600"href="#resume">resume</a>. I am
-            also looking to collaborate in open-source projects.
+            I am currently looking for an internship that are web-development related, including server maintance, backend, automated workflow, etc. I have over 4 years exprience in programming, and in my 
+            past experience, I have been working with Java and React JS to creat intuitive management tools.  
           </p>
         </div>
 
@@ -49,7 +50,7 @@ export default function About() {
       autoplay
       loop
       mode="bounce"
-      src="https://assets10.lottiefiles.com/packages/lf20_w98qte06.json"
+      src="https://lottie.host/9985a1ad-3072-4467-bfcb-4241fce1ed61/Mqeqwz3iAy.json"
       style={{ width: "350px" }}
       data-aos={"fade-left"}
     />
@@ -59,9 +60,9 @@ export default function About() {
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://drive.google.com/file/d/1j3zq63xCjbE4RBF-Bumj124Z79jFsoj8/view?usp=sharing"
+        href="https://drive.google.com/file/d/128uH4p-CKnE4xaSf7PemkZkysK01vmZJ/view?usp=sharing  "
       >
-        View Resume
+        View My Resume
       </a>
     </button>
   </div>
