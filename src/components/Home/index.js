@@ -25,9 +25,8 @@ export default function Home() {
           options={{
             strings: [
               "👋 I'm Shangchen Hsieh",
-              "I'm an backend Software Developer!",
-              "I'm a senior Computer science in San Jose State University",
-              "You can contact me through emails or LinkedIn",
+              "A backend Software Developer!",
+              "A senior Computer Science Student in San Jose State University",
             ],
             delay: 48,
             pauseFor: 1500,
