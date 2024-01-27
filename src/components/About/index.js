@@ -2,6 +2,7 @@ import "../../App.css";
 import DownloadIcon from "@mui/icons-material/Download";
 // import LearningCode from "../../assets/images/learn-coding-clipart.svg";
 import * as LottiePlayer from "@lottiefiles/lottie-player";
+import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf"
 
 export default function About() {
   
@@ -60,7 +61,7 @@ export default function About() {
       <a
         target="_blank"
         rel="noreferrer"
-        href="https://drive.google.com/file/d/128uH4p-CKnE4xaSf7PemkZkysK01vmZJ/view?usp=sharing"
+        href={resume}
       >
         View My Resume
       </a>

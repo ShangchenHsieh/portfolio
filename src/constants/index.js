@@ -1,4 +1,4 @@
-
+import pmtPic from "../assets/images/cats.jpg"
 export const projects = [
   {
     title: "Pet Management System",
@@ -18,7 +18,7 @@ export const projects = [
       }
     ],
     
-    img: "https://cdn.discordapp.com/attachments/1153816285268938812/1200922620145696788/cats.png?ex=65c7f158&is=65b57c58&hm=da15db2a28f3cbbfa99882decfb890452584107c90901e30c872eed8403811e7&",
+    img: pmtPic,
     link: "", // to be upload
     code: "https://github.com/ShangchenHsieh/pet-management-tool",
   },
