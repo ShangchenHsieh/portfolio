@@ -1,24 +1,26 @@
+
 export const projects = [
   {
-    title: "CodeAssistAI",
-    desc: "A full stack application built to analyze and manipulate large projects using the OpenAI API",
+    title: "Pet Management System",
+    desc: "This robust full-stack application efficiently manages and monitors animal well-being. Integrating Spring Boot and React.js, it offers a user-friendly interface for streamlined animal care, tracking, and health status management.",
     tags: [
       {
-        name: "React.js",
-        color: "red-600",
+        name: "Springboot",
+        color: "green-400",
       },
       {
-        name: "OpenAI API",
-        color: "green-600",
+        name: "React JS",
+        color: "blue-400",
       },
       {
-        name: "Django",
-        color: "blue-300",
-      },
+        name: "PostgreSQL", 
+        color: "blue-300"
+      }
     ],
-    img: "https://cdn.discordapp.com/attachments/1015033055775305831/1166088826544980018/image.png?ex=654937d9&is=6536c2d9&hm=e4bd9ab6868958d874eab95e01540b5793f9f64b7af295569cc6b7ebfb15bbf1&",
-    link: "https://code-assist-ai.vercel.app/",
-    code: "https://github.com/khmorad/code-assist-ai",
+    
+    img: "https://cdn.discordapp.com/attachments/1153816285268938812/1200922620145696788/cats.png?ex=65c7f158&is=65b57c58&hm=da15db2a28f3cbbfa99882decfb890452584107c90901e30c872eed8403811e7&",
+    link: "", // to be upload
+    code: "https://github.com/ShangchenHsieh/pet-management-tool",
   },
   {
     title: "Ai Assist",
@@ -59,52 +61,5 @@ export const projects = [
     img: "https://cdn.stackoverflow.co/images/jo7n4k8s/production/01318ce55cab0d508bd88b6ec5610ec1c659060a-2400x1260.png?w=1200&h=630&auto=format&dpr=2",
     link: "https://github.com/khmorad/stackoverflow_data_analysis",
     code: "https://github.com/khmorad/stackoverflow_data_analysis",
-  },
-  {
-    title: "Stock Prediction Experiment",
-    desc: "A python program design to use machiene learning models like linear regression and Long Short-Term Memory to predict stocks ",
-    tags: [
-      {
-        name: "python",
-        color: "red-600",
-      },
-      {
-        name: "pandas",
-        color: "green-600",
-      },
-      {
-        name: "Machine Learning",
-        color: "blue-800",
-      },
-      {
-        name: "polygon API",
-        color: "yellow-600",
-      },
-    ],
-    img: "https://cdn.dribbble.com/users/1330777/screenshots/15577912/media/3441c6b4d1427a5e54d2b53607891a71.gif",
-    link: "https://github.com/khmorad/stock_pridiction_experiment",
-    code: "https://github.com/khmorad/stock_pridiction_experiment",
-  },
-  {
-    title: "Cisco Sextant Dashboard",
-    desc: "Created dashboard which uses Node.js and React.js that provides all the relevent information about current device being used.",
-    tags: [
-      {
-        name: "React.js",
-        color: "red-600",
-      },
-      {
-        name: "NextJs",
-        color: "green-600",
-      },
-      {
-        name: "ipify API",
-        color: "yellow-600",
-      },
-     
-    ],
-    img: "https://cdn.discordapp.com/attachments/1015033055775305831/1156719942582931476/cisco_sextant.jpg?ex=6515fee5&is=6514ad65&hm=63761616da6969bf7a17692feec323cb8e78ac03b5d0fdec7a7fee0b5a48f128&",
-    link: "https://www.youtube.com/watch?v=YtyWXA_kwBk&ab_channel=khashayarmoradpour",
-    code: "https://github.com/khmorad/cisco_sextant_tasks",
-  },
+  }
 ];
