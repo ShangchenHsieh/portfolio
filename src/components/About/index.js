@@ -1,7 +1,4 @@
 import "../../App.css";
-import DownloadIcon from "@mui/icons-material/Download";
-// import LearningCode from "../../assets/images/learn-coding-clipart.svg";
-import * as LottiePlayer from "@lottiefiles/lottie-player";
 import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf"
 
 export default function About() {
