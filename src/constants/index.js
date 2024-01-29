@@ -1,5 +1,6 @@
 import pmtPic from "../assets/images/cats.jpg"
 import libPic from "../assets/images/libraay system.png"
+import projectmt from "../assets/images/project-management-tool.webp"
 export const projects = [
   {
     title: "Pet Management System",
@@ -40,9 +41,9 @@ export const projects = [
       }
     
     ],
-    img: "",
-    link: "",
-    code: "",
+    img: projectmt,
+    link: "https://github.com/ShangchenHsieh/personal-project-management-tool",
+    code: "https://github.com/ShangchenHsieh/personal-project-management-tool",
   },
   {
     title: "Library Management System",
