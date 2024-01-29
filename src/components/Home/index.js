@@ -46,7 +46,7 @@ export default function Home() {
         data-aos="zoom-out-up"
         data-aos-delay="1400"
       >
-        <a href="#contact">Contact Me</a>
+        <a href="#contact">Message Me</a>
       </button>
       <div
         className="cursor-pointer w-fit absolute bottom-16 left-[47%] sm:left-[62%]"

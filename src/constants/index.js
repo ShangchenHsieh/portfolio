@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     title: "Project Management Tool",
-    desc: "",
+    desc: "This full-stack management tool allows users to perform CRUD operations on their personal projects, and it also implements PostgreSQL to persist project information and user credentials. In addition, Json web token was also integrated for authentication purpose.",
     tags: [
       {
         name: "Springboot",
