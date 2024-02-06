@@ -26,7 +26,7 @@ export default function Home() {
             strings: [
               "👋 I'm Shangchen Hsieh",
               "A Backend Developer!",
-              "A senior Computer Science Student in San Jose State University",
+              "A senior Computer Science student at San Jose State University",
             ],
             delay: 48,
             pauseFor: 1500,
