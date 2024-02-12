@@ -22,8 +22,8 @@ export default function Contact() {
    // const { REACT_APP_SERVICEID, REACT_APP_TEMPLATE, REACT_APP_PUBLICKEY } =
      // process.env;
    const   REACT_APP_SERVICEID="service_vlur9ss"
-   const REACT_APP_TEMPLATE="template_y1elat9"
-   const REACT_APP_PUBLICKEY="jRGIvist-rp3ksJUP"
+   const REACT_APP_TEMPLATE="template_l8f3775"
+   const REACT_APP_PUBLICKEY="SU5S1S93hiVwUuA-n"
     console.log({
       username: username.value,
       email: email.value,
