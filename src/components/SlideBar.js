@@ -98,7 +98,7 @@ export default function Slidebar() {
         </div>
         <div
           onClick={() =>
-            window.open("https://www.instagram.com/shawn.h___", "_blank")
+            window.open("https://www.instagram.com/seanch.h___/", "_blank")
           }
         >
           {" "}
