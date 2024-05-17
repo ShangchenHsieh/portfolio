@@ -3,15 +3,15 @@ import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf"
 
 export default function About() {
   
-  const getDate = () => {
-    //changing the age without hard coding it
-    var dob = new Date("07/02/2001");
-    var month_diff = Date.now() - dob.getTime();
-    var age_dt = new Date(month_diff);
-    var year = age_dt.getUTCFullYear();
-    var age = Math.abs(year - 1970);
-    return age;
-  };
+  // const getDate = () => {
+  //   //changing the age without hard coding it
+  //   var dob = new Date("07/02/2001");
+  //   var month_diff = Date.now() - dob.getTime();
+  //   var age_dt = new Date(month_diff);
+  //   var year = age_dt.getUTCFullYear();
+  //   var age = Math.abs(year - 1970);
+  //   return age;
+  // };
   return (
     <div
       id="about"
@@ -51,15 +51,16 @@ export default function About() {
     />
   </div>
   <div class="flex justify-center" data-aos={"fade-left"}>
-    <button class="py-3 mt-5 text-white mx-auto px-9 bg-blue-600 border-2 w-fit border-blue-500 rounded-3xl hover:-translate-y-1.5 duration-[350ms] hover:duration-[350ms] hover:bg-blue-800 hover:scale-[1.023] focus:bg-blue-800 animate-zoomy">
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href={resume}
-      >
-        View My Resume
-      </a>
-    </button>
+  <button class="py-3 mt-5 text-white mx-auto px-9 bg-orange-500 border-2 w-fit border-orange-400 rounded-lg hover:-translate-y-1.5 duration-[350ms] hover:duration-[350ms] hover:bg-orange-600 hover:scale-[1.023] focus:bg-orange-600 bg-opacity-80">
+    <a
+      target="_blank"
+      rel="noreferrer"
+      href={resume}
+    >
+      View My Resume
+    </a>
+</button>
+
   </div>
 </div>
 

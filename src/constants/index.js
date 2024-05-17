@@ -1,7 +1,29 @@
 import pmtPic from "../assets/images/cats.jpg"
 import libPic from "../assets/images/libraay system.png"
 import projectmt from "../assets/images/project-management-tool.webp"
+import germany from "../assets/images/germany.png"
 export const projects = [
+  {
+    title: "Germany City_",
+    desc: "Germany City+ is a travel planning Dash app for exploring Germany, providing personalized recommendations using KMeans-clustering model and AI algorithms.",
+    tags: [
+      {
+        name: "Dash",
+        color: "blue-300",
+      },
+      {
+        name: "Plotly",
+        color: "pink-400",
+      },
+      {
+        name: "Sci-kit Learn", 
+        color: "orange-300"
+      }
+    ],
+    img: germany,
+    link: "", // to be upload
+    code: "https://github.com/ShangchenHsieh/germany_city_plus",
+  },
   {
     title: "Pet Management System",
     desc: "This robust full-stack application efficiently manages and monitors animal well-being. Integrating Spring Boot and React.js, it offers a user-friendly interface for streamlined animal care, tracking, and health status management.",

@@ -1,5 +1,5 @@
 import BarGraph from "./BarGraph";
-import DownloadIcon from "@mui/icons-material/Download";
+// import DownloadIcon from "@mui/icons-material/Download";
 import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf"
 import udemy from "../../assets/files/udemy_certificate.pdf"
 
@@ -38,6 +38,36 @@ export default function Resume() {
             </p>
 
           </li>
+
+          <li class="mb-10" data-aos="zoom-in">
+            <span class="absolute flex items-center justify-center w-6 h-6   rounded-full -left-3 ring-8  ring-gray-900 bg-blue-900">
+              <svg
+                aria-hidden="true"
+                class="w-3 h-3  text-blue-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+            <h3 class="mb-1 text-lg font-semibold text-white">
+              Guest Speaker of International Gateways at San Jose State University
+            </h3>
+            <time class="block pt-1 pb-3  text-sm font-normal leading-none  text-gray-500">
+              November 16, 2023
+            </time>
+            <p class="mb-4 text-base font-normal  text-gray-400">
+              As part of the International Gateways in the past, shared my experiences of my academic journey with the following students who want to follow similar similar path. 
+            </p>
+
+          </li>
+
+
           <li class="mb-10" data-aos="zoom-out" data-aos-delay="700">
             <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
               <svg
