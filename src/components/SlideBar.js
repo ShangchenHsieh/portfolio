@@ -2,9 +2,10 @@ import "../App.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import { useState } from "react";
 import "../componentStyling/SlideBar.css"
+import { Button } from "@mui/material";
+import coffee from "../assets/images/buy_me_a_coffee.jpg"
 
 export default function Slidebar() {
   const [select, setSelect] = useState(0);
@@ -105,6 +106,25 @@ export default function Slidebar() {
           <InstagramIcon className="cursor-pointer hover:scale-105" />
         </div>
       </div>
+
+      <div className="text-white flex flex-row gap-5 w-fit mx-auto pt-7"
+        data-aos="slide-up"
+        data-aos-delay="2300">
+
+<div 
+          onClick={() =>
+            window.open("https://www.paypal.com/paypalme/buyseanacoffee", "_blank")
+          }
+        >
+          <Button>
+            <img src={coffee} alt="Buy Me a Coffee" className="cursor-pointer hover:scale-105" style={{ width: "150px" }} />
+          </Button>
+        </div>
+
+      </div>
+
+      
+
     </div>
   );
 }
