@@ -4,7 +4,7 @@ import projectmt from "../assets/images/project-management-tool.webp"
 import germany from "../assets/images/germany.png"
 export const projects = [
   {
-    title: "Germany City_",
+    title: "Germany City+",
     desc: "Germany City+ is a travel planning Dash app for exploring Germany, providing personalized recommendations using KMeans-clustering model and AI algorithms.",
     tags: [
       {
@@ -25,12 +25,12 @@ export const projects = [
     code: "https://github.com/ShangchenHsieh/germany_city_plus",
   },
   {
-    title: "Pet Management System",
+    title: "Pawfect+",
     desc: "This robust full-stack application efficiently manages and monitors animal well-being. Integrating Spring Boot and React.js, it offers a user-friendly interface for streamlined animal care, tracking, and health status management.",
     tags: [
       {
-        name: "Springboot",
-        color: "green-400",
+        name: "FastAPI",
+        color: "blue-250",
       },
       {
         name: "React JS",
@@ -46,7 +46,7 @@ export const projects = [
     code: "https://github.com/ShangchenHsieh/pet-management-tool",
   },
   {
-    title: "Pawfect+",
+    title: "Project Management Tool",
     desc: "This full-stack management tool allows users to perform CRUD operations on their personal projects, and it also implements PostgreSQL to persist project information and user credentials. In addition, Json web token was also integrated for authentication purpose.",
     tags: [
       {
