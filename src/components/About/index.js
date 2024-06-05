@@ -59,6 +59,7 @@ export default function About() {
     >
       View My Resume
     </a>
+    
 </button>
 
   </div>
