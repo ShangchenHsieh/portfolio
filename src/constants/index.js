@@ -22,7 +22,7 @@ export const projects = [
     ],
     img: germany,
     link: "", // to be upload
-    code: "https://github.com/ShangchenHsieh/germany_city_plus",
+    code: "https://github.com/ShangchenHsieh/Germany-City-Plus",
   },
   {
     title: "Pawfect+",
