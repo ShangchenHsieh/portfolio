@@ -11,6 +11,8 @@ import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+import Lottie from "react-lottie";
+import animationData from "../../assets/Animation - 1717656274304.json"
 
 export default function Contact() {
   const [mailSent, setMailSent] = useState(false);
@@ -74,6 +76,12 @@ export default function Contact() {
         }
       );
   };
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    renderer: 'svg'
+}
   return (
     <div
       id="contact"
@@ -186,13 +194,13 @@ export default function Contact() {
         </div>
         <div className="flex-auto w-80  flex flex-col justify-center text-center items-center  gap-1">
           <div data-aos={"fade-left"}>
-            <lottie-player
-              autoplay
-              loop
-              mode="bounce"
-              src="https://lottie.host/3862767a-98bb-416c-8abc-92a27f9499af/okjakj42f3.json"
-              style={{ width: "350px" }}
-            />
+            <div>
+              <Lottie
+               options={defaultOptions}
+               height={400}
+               width={500}
+              />
+            </div> 
           </div>
           <div data-aos={"slide-up"} className="text-center">
             <div className="text-center mt-2 text-3xl font-bold">Connect with Me</div>

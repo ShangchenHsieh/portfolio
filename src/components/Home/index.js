@@ -25,7 +25,7 @@ export default function Home() {
           options={{
             strings: [
               "👋 I'm Shangchen Hsieh",
-              "A Backend Developer!",
+              "A Full-stack Developer!",
               "A senior Computer Science student at San Jose State University",
             ],
             delay: 48,

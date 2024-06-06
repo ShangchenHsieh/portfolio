@@ -7,7 +7,7 @@ export default function work({ title, desc, tags, link, code, img }) {
         scale: 1,
         speed: 450,
       }}
-      className="bg-[#0b212d]  rounded-2xl max-w-[362px]  h-full bg-gradient-to-r from-green-700 to-pink-800 p-[1px]"
+      className="bg-[#0b212d]  rounded-2xl max-w-[362px]  h-full bg-gradient-to-r from-blue-500 to-purple-700 p-[1px]"
     >
       <div className="bg-[#0b212d] w-full h-full rounded-2xl p-4 flex flex-col justify-between">
         <div>
