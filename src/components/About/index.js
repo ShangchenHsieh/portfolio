@@ -37,14 +37,14 @@ export default function About() {
           <p
             className="pt-5 leading-7 text-slate-900 text-justify"
             data-aos={"fade-right"}
-          >Greetings! I am Sean, a senior computer science student at San Jose State University, specializing in backend development and Machine Learning. I bring a dedicated focus to crafting innovative solutions. Beyond my academic pursuits, I am well-versed in customizing hardware peripherals, such as bespoke PCs and keyboards. Committed to maintaining a healthy work-life balance, I engage in regular workouts to stay active. My keen interest extends into the competitive gaming industry, where I delve into the latest trends and advancements. 
+          >Hello there! I am Sean, a senior computer science student at San Jose State University, specializing in backend development and Machine Learning. I bring a dedicated focus to crafting innovative solutions. Beyond my academic pursuits, I am well-versed in customizing hardware peripherals, such as desktops and keyboards. I am also committed to maintaining a healthy work-life balance, I engage in badminton, Brazilian Jiu-Jitsu, and body-building to reamin active.  
           </p>
           <p
             className="text-justify leading-7 text-slate-900"
             data-aos={"fade-right"}
             style={{ paddingBottom: '80px' }}
           >
-            I am actively seeking an internship opportunity in the realm of web development, encompassing responsibilities such as server maintenance, backend development, and workflow automation. With over four years of programming experience, I bring a wealth of knowledge and expertise to contribute. In my previous roles, I successfully utilized Java and React JS to architect intuitive management tools, showcasing my proficiency in creating impactful and efficient solutions. I am eager to apply my skills and dedication to further enhance my capabilities in a professional setting.  
+            I am actively seeking an internship/fulltime opportunity in the realm of web development, encompassing responsibilities such as server maintenance, backend development, and workflow automation. With over four years of software engineering experience, I bring a wealth of knowledge and expertise to contribute. In my previous roles, I successfully utilized Java/Python and React JS to architect user-friendly management tools, showcasing my proficiency in creating impactful and efficient solutions. I am eager to apply my skills and dedication to further enhance my capabilities in a professional setting.  
           </p>
         </div>
 

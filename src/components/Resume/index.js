@@ -7,7 +7,7 @@ export default function Resume() {
   return (
     <div id="resume" className="min-h-screen flex-col text-center">
       <div className="text-5xl font-bold py-8" data-aos={"slide-down"}>
-        Resume
+        Experiences
       </div>
       <div className="grid grid-cols-2 gap-7 mt-7">
         <ol class="relative border-l  border-gray-700 ml-9 mb-6">
@@ -31,7 +31,7 @@ export default function Resume() {
               BS in Computer Science
             </h3>
             <time class="block pt-1 pb-3  text-sm font-normal leading-none  text-gray-500">
-              Aug 2022 - Present
+              Aug 2022 - May 2025 Expected
             </time>
             <p class="mb-4 text-base font-normal  text-gray-400">
               Pursuing my Bachlor's degree at San Jose State University.  

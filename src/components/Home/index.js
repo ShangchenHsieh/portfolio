@@ -13,7 +13,7 @@ export default function Home() {
         className="head text-5xl font-semibold tracking-[3px] pb-2 "
         data-aos="zoom-in-up"
       >
-        Welcome
+        Discover the Beauty of Computer Science
       </h1>
       <div
         className="text-4xl text-yellow-500 pb-16"
@@ -46,7 +46,7 @@ export default function Home() {
         data-aos="zoom-out-up"
         data-aos-delay="1400"
       >
-        <a href="#contact">Message Me</a>
+        <a href="#contact">Contact Me</a>
       </button>
       <div
         className="cursor-pointer w-fit absolute bottom-16 left-[47%] sm:left-[62%]"
