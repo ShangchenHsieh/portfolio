@@ -34,7 +34,7 @@ export default function Resume() {
               Aug 2022 - May 2025 Expected
             </time>
             <p class="mb-4 text-base font-normal  text-gray-400">
-              Pursuing my Bachlor's degree at San Jose State University.  
+              Pursuing my Bachlor's degree at San Jose State University.
             </p>
 
           </li>
@@ -62,7 +62,7 @@ export default function Resume() {
               November 16, 2023
             </time>
             <p class="mb-4 text-base font-normal  text-gray-400">
-              As part of the International Gateways in the past, shared my experiences of my academic journey with the following students who want to follow similar similar path. 
+              As part of the International Gateways in the past, shared my experiences of my academic journey with the following students who want to follow similar similar path.
             </p>
 
           </li>
@@ -113,7 +113,7 @@ export default function Resume() {
               </svg>{" "}
               Download Certificate
             </a>
-            
+
           </li>
           <li class="mb-10" data-aos="zoom-out" data-aos-delay="700">
             <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
@@ -132,20 +132,20 @@ export default function Resume() {
               </svg>
             </span>
             <h3 class="mb-1 text-lg font-semibold text-white">
-            Backend Developer at Developer's Guild
+              Backend Developer at Developer's Guild
             </h3>
             <time class="block mb-2 text-sm font-normal leading-none text-gray-500">
-              Fall 2021 - Summer 2022 
+              Fall 2021 - Summer 2022
             </time>
             <p class="text-base font-normal text-gray-400">
-            Designed a highly scalable RESTful blog posting application for 1,500 active students, ensuring optimal performance and efficient resource utilization using Spring Boot Framework.
-Utilized MySQL for efficient data management and query execution, resulting in a 25% improvement in database performance and optimized response times.
-Seamlessly deployed the application on Digital Ocean, ensuring reliable performance and scalability, with 99.9% uptime and the ability to handle high traffic loads.  
+              Designed a highly scalable RESTful blog posting application for 1,500 active students, ensuring optimal performance and efficient resource utilization using Spring Boot Framework.
+              Utilized MySQL for efficient data management and query execution, resulting in a 25% improvement in database performance and optimized response times.
+              Seamlessly deployed the application on Digital Ocean, ensuring reliable performance and scalability, with 99.9% uptime and the ability to handle high traffic loads.
 
-              
+
             </p>
-            
-            
+
+
           </li>
           <li data-aos="zoom-in" data-aos-offset={"-15"} data-aos-delay="1300">
             <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
@@ -170,34 +170,33 @@ Seamlessly deployed the application on Digital Ocean, ensuring reliable performa
               Spring 2021 - Summer 2022
             </time>
             <p class="text-base font-normal text-gray-400">
-            Instructed a class of 40 students on Data Structures, fostering a solid understanding of fundamental computer science concepts.
-            Demonstrated algorithmic efficiency and complexity analysis by solving 5 challenging problems weekly, showcasing various computational complexities and their real-world implications.
-            Mentored students in algorithmic concepts through interactive sessions and personalized guidance.
+              Instructed a class of 40 students on Data Structures, fostering a solid understanding of fundamental computer science concepts.
+              Demonstrated algorithmic efficiency and complexity analysis by solving 5 challenging problems weekly, showcasing various computational complexities and their real-world implications.
+              Mentored students in algorithmic concepts through interactive sessions and personalized guidance.
             </p>
           </li>
-          
+
         </ol>
 
         <div className="flex flex-col text-center" data-aos="slide-up">
           <div className="text-3xl font-bold py-3">My Skills</div>
           <div className="ml-16 flex flex-col gap-8 mt-6">
-            
-            <BarGraph name={"Java"} percent={85} />
-            <BarGraph name={"Python"} percent={78} />
-            <BarGraph name={"React.js"} percent={75} />
-            <BarGraph name={"JavaScript"} percent={70} />
-            <BarGraph name={"HTML/CSS"} percent={75} />
-            <BarGraph name={"SQL"} percent={65} />
+
+            <BarGraph name={"Java"} percent={70} />
+            <BarGraph name={"Python"} percent={75} />
+            <BarGraph name={"JavaScript"} percent={65} />
+            <BarGraph name={"HTML/CSS"} percent={65} />
+            <BarGraph name={"SQL"} percent={60} />
 
           </div>
 
           <a
-              target="_blank"
-              rel="noreferrer"
-              href={resume}
+            target="_blank"
+            rel="noreferrer"
+            href={resume}
             class="inline-flex items-center px-6 py-2 mt-12 mx-auto w-fit text-sm font-medium border rounded-lg  focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700 focus:ring-gray-700"
           >
-            View Resume 
+            View Resume
           </a>
         </div>
       </div>

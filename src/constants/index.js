@@ -4,6 +4,27 @@ import projectmt from "../assets/images/project-management-tool.webp"
 import germany from "../assets/images/germany.png"
 export const projects = [
   {
+    title: "Nimbus Cloud Banking",
+    desc: "Germany City+ is a travel planning Dash app for exploring Germany, providing personalized recommendations using KMeans-clustering model and AI algorithms.",
+    tags: [
+      {
+        name: "Django",
+        color: "blue-300",
+      },
+      {
+        name: "AWS RDS",
+        color: "pink-400",
+      },
+      {
+        name: "Vite",
+        color: "orange-300"
+      }
+    ],
+    img: germany,
+    link: "https://youtu.be/sortpnx6NxI", // to be upload
+    code: "https://github.com/ShangchenHsieh/nimbus-cloud-banking",
+  },
+  {
     title: "Germany City+",
     desc: "Germany City+ is a travel planning Dash app for exploring Germany, providing personalized recommendations using KMeans-clustering model and AI algorithms.",
     tags: [
@@ -16,7 +37,7 @@ export const projects = [
         color: "pink-400",
       },
       {
-        name: "Sci-kit Learn", 
+        name: "Sci-kit Learn",
         color: "orange-300"
       }
     ],
@@ -37,7 +58,7 @@ export const projects = [
         color: "blue-400",
       },
       {
-        name: "PostgreSQL", 
+        name: "PostgreSQL",
         color: "blue-300"
       }
     ],
@@ -58,10 +79,10 @@ export const projects = [
         color: "blue-400",
       },
       {
-        name: "PostgreSQL", 
+        name: "PostgreSQL",
         color: "blue-300"
       }
-    
+
     ],
     img: projectmt,
     link: "https://github.com/ShangchenHsieh/personal-project-management-tool",
@@ -74,9 +95,9 @@ export const projects = [
       {
         name: "Java",
         color: "red-400",
-      }, 
+      },
       {
-        name: "Java Swing", 
+        name: "Java Swing",
         color: "blue-700"
       }
     ],
