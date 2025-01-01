@@ -2,6 +2,7 @@ import pmtPic from "../assets/images/cats.jpg"
 import libPic from "../assets/images/libraay system.png"
 import projectmt from "../assets/images/project-management-tool.webp"
 import germany from "../assets/images/germany.png"
+import nimbus from "../assets/images/nimbus.png"
 export const projects = [
   {
     title: "Nimbus Cloud Banking",
@@ -20,7 +21,7 @@ export const projects = [
         color: "orange-300"
       }
     ],
-    img: germany,
+    img: nimbus,
     link: "https://youtu.be/sortpnx6NxI", // to be upload
     code: "https://github.com/ShangchenHsieh/nimbus-cloud-banking",
   },
