@@ -19,14 +19,13 @@ export default function Slidebar() {
             className="rounded-full border-solid cursor-pointer  border-[3px] border-stone-600 min-h-fit mx-auto  max-w-[190px]"
           />
           <h3 className="text-white name py-4 font-medium ">
-            Shang-chen<br/>Hsieh
+            Shang-chen<br />Hsieh
           </h3>
         </div>
         <p
           onClick={() => setSelect(0)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
-            select === 0 ? "text-blue-600 " : ""
-          }`}
+          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${select === 0 ? "text-blue-600 " : ""
+            }`}
           data-aos="slide-right"
           data-aos-delay="200"
         >
@@ -34,9 +33,8 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(1)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
-            select === 1 ? "text-blue-600 " : ""
-          }`}
+          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${select === 1 ? "text-blue-600 " : ""
+            }`}
           data-aos-delay="600"
           data-aos="slide-left"
         >
@@ -44,9 +42,8 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(2)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
-            select === 2 ? "text-blue-600 " : ""
-          }`}
+          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${select === 2 ? "text-blue-600 " : ""
+            }`}
           data-aos="slide-right"
           data-aos-delay="1000"
         >
@@ -54,9 +51,8 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(3)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
-            select === 3 ? "text-blue-600 " : ""
-          }`}
+          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${select === 3 ? "text-blue-600 " : ""
+            }`}
           data-aos="slide-left"
           data-aos-delay="1400"
         >
@@ -64,9 +60,8 @@ export default function Slidebar() {
         </p>
         <p
           onClick={() => setSelect(4)}
-          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${
-            select === 4 ? "text-blue-600 " : ""
-          }`}
+          className={`cursor-pointer hover:text-blue-600 hover:-translate-y-0.5 hover:text-xl transition hover:transition ${select === 4 ? "text-blue-600 " : ""
+            }`}
           data-aos="slide-right"
           data-aos-delay="1800"
         >
@@ -89,7 +84,7 @@ export default function Slidebar() {
         <div
           onClick={() =>
             window.open(
-              "https://www.linkedin.com/in/shangchen-hsieh-598167222/",
+              "https://www.linkedin.com/in/shang-chen-hsieh-598167222/",
               "_blank"
             )
           }
@@ -111,7 +106,7 @@ export default function Slidebar() {
         data-aos="slide-up"
         data-aos-delay="2300">
 
-<div 
+        <div
           onClick={() =>
             window.open("https://www.paypal.com/paypalme/buyseanacoffee", "_blank")
           }
@@ -123,7 +118,7 @@ export default function Slidebar() {
 
       </div>
 
-      
+
 
     </div>
   );

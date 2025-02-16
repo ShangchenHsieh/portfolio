@@ -21,11 +21,11 @@ export default function Contact() {
     setLoading(true);
     e.preventDefault();
     const { username, email, message } = e.target.elements;
-   // const { REACT_APP_SERVICEID, REACT_APP_TEMPLATE, REACT_APP_PUBLICKEY } =
-     // process.env;
-   const   REACT_APP_SERVICEID="service_vlur9ss"
-   const REACT_APP_TEMPLATE="template_l8f3775"
-   const REACT_APP_PUBLICKEY="SU5S1S93hiVwUuA-n"
+    // const { REACT_APP_SERVICEID, REACT_APP_TEMPLATE, REACT_APP_PUBLICKEY } =
+    // process.env;
+    const REACT_APP_SERVICEID = "service_vlur9ss"
+    const REACT_APP_TEMPLATE = "template_l8f3775"
+    const REACT_APP_PUBLICKEY = "SU5S1S93hiVwUuA-n"
     console.log({
       username: username.value,
       email: email.value,
@@ -81,7 +81,7 @@ export default function Contact() {
     autoplay: true,
     animationData: animationData,
     renderer: 'svg'
-}
+  }
   return (
     <div
       id="contact"
@@ -138,9 +138,8 @@ export default function Contact() {
             ></textarea>
             <button
               type="submit"
-              className={`${
-                mailSent === false && loading === false ? "" : "hidden"
-              }  mt-7 py-2 px-4 rounded-md 
+              className={`${mailSent === false && loading === false ? "" : "hidden"
+                }  mt-7 py-2 px-4 rounded-md 
               bg-blue-500 hover:bg-blue-700 focus:ring-blue-800
               `}
             >
@@ -149,9 +148,8 @@ export default function Contact() {
             <button
               disabled
               type="button"
-              className={`text-white ${
-                loading === true ? "visible" : "hidden"
-              } disabled font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 bg-blue-500 hover:bg-blue-700 focus:ring-blue-800 inline-flex items-center mt-5`}
+              className={`text-white ${loading === true ? "visible" : "hidden"
+                } disabled font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 bg-blue-500 hover:bg-blue-700 focus:ring-blue-800 inline-flex items-center mt-5`}
             >
               <svg
                 aria-hidden="true"
@@ -184,9 +182,8 @@ export default function Contact() {
             <button
               type="button"
               disable={"true"}
-              className={`bg-green-600 hover:bg-green-700 focus:ring-green-800 ${
-                mailSent === true && loading === false ? "visible" : "hidden"
-              } cursor-default  mt-7 py-2 px-4 rounded-md `}
+              className={`bg-green-600 hover:bg-green-700 focus:ring-green-800 ${mailSent === true && loading === false ? "visible" : "hidden"
+                } cursor-default  mt-7 py-2 px-4 rounded-md `}
             >
               <FileDownloadDoneIcon /> Message Sent
             </button>
@@ -196,11 +193,11 @@ export default function Contact() {
           <div data-aos={"fade-left"}>
             <div>
               <Lottie
-               options={defaultOptions}
-               height={400}
-               width={500}
+                options={defaultOptions}
+                height={400}
+                width={500}
               />
-            </div> 
+            </div>
           </div>
           <div data-aos={"slide-up"} className="text-center">
             <div className="text-center mt-2 text-3xl font-bold">Connect with Me</div>
@@ -215,7 +212,7 @@ export default function Contact() {
               <div
                 onClick={() =>
                   window.open(
-                    "https://www.linkedin.com/in/shangchen-hsieh-598167222/",
+                    "https://www.linkedin.com/in/shang-chen-hsieh-598167222/",
                     "_blank"
                   )
                 }
@@ -237,7 +234,7 @@ export default function Contact() {
 
 
             </div>
-   
+
           </div>
         </div>
         <ToastContainer

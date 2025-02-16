@@ -1,9 +1,26 @@
 import pmtPic from "../assets/images/cats.jpg"
-import libPic from "../assets/images/libraay system.png"
+import nexGen from "../assets/images/nexgen.png"
 import projectmt from "../assets/images/project-management-tool.webp"
 import germany from "../assets/images/germany.png"
 import nimbus from "../assets/images/nimbus.png"
 export const projects = [
+  {
+    title: "NexGen AI",
+    desc: "NextGen AI is a AI powered cover letter generator that automate the process of generation, formatting, and download.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-400",
+      },
+      {
+        name: "openAI",
+        color: "green-400",
+      },
+    ],
+    img: nexGen,
+    link: "https://nexgen-cover-letter-generator-986061347733.us-central1.run.app",
+    code: "https://nexgen-cover-letter-generator-986061347733.us-central1.run.app",
+  },
   {
     title: "Nimbus Cloud Banking",
     desc: "Germany City+ is a travel planning Dash app for exploring Germany, providing personalized recommendations using KMeans-clustering model and AI algorithms.",
@@ -89,21 +106,4 @@ export const projects = [
     link: "https://github.com/ShangchenHsieh/personal-project-management-tool",
     code: "https://github.com/ShangchenHsieh/personal-project-management-tool",
   },
-  {
-    title: "Library Management System",
-    desc: "CS151 Library Management System digitizes the local library, offering a user-friendly interface, CRUD operations, and persistent data using JSON files.",
-    tags: [
-      {
-        name: "Java",
-        color: "red-400",
-      },
-      {
-        name: "Java Swing",
-        color: "blue-700"
-      }
-    ],
-    img: libPic,
-    link: "https://github.com/ShangchenHsieh/CS151_Library_Management_System",
-    code: "https://github.com/ShangchenHsieh/CS151_Library_Management_System",
-  }
 ];

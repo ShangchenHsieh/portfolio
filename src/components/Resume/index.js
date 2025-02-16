@@ -31,7 +31,7 @@ export default function Resume() {
               BS in Computer Science
             </h3>
             <time class="block pt-1 pb-3  text-sm font-normal leading-none  text-gray-500">
-              Aug 2022 - May 2025 Expected
+              Aug 2022 - May 2025
             </time>
             <p class="mb-4 text-base font-normal  text-gray-400">
               Pursuing my Bachlor's degree at San Jose State University.
@@ -181,12 +181,9 @@ export default function Resume() {
         <div className="flex flex-col text-center" data-aos="slide-up">
           <div className="text-3xl font-bold py-3">My Skills</div>
           <div className="ml-16 flex flex-col gap-8 mt-6">
-
-            <BarGraph name={"Java"} percent={70} />
-            <BarGraph name={"Python"} percent={75} />
-            <BarGraph name={"JavaScript"} percent={65} />
-            <BarGraph name={"HTML/CSS"} percent={65} />
-            <BarGraph name={"SQL"} percent={60} />
+            <BarGraph name={"Python"} percent={80} />
+            <BarGraph name={"Java"} percent={20} />
+            <BarGraph name={"JavaScript"} percent={85} />
 
           </div>
 
