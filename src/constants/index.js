@@ -84,26 +84,4 @@ export const projects = [
     link: "", // to be upload
     code: "https://github.com/ShangchenHsieh/pet-management-tool",
   },
-  {
-    title: "Project Management Tool",
-    desc: "This full-stack management tool allows users to perform CRUD operations on their personal projects, and it also implements PostgreSQL to persist project information and user credentials. In addition, Json web token was also integrated for authentication purpose.",
-    tags: [
-      {
-        name: "Springboot",
-        color: "green-400",
-      },
-      {
-        name: "React JS",
-        color: "blue-400",
-      },
-      {
-        name: "PostgreSQL",
-        color: "blue-300"
-      }
-
-    ],
-    img: projectmt,
-    link: "https://github.com/ShangchenHsieh/personal-project-management-tool",
-    code: "https://github.com/ShangchenHsieh/personal-project-management-tool",
-  },
 ];
