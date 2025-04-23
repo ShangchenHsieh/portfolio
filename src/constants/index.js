@@ -1,9 +1,25 @@
 import pmtPic from "../assets/images/cats.jpg"
 import nexGen from "../assets/images/nexgen.png"
-import projectmt from "../assets/images/project-management-tool.webp"
+import pmp from "../assets/images/pmp_pic.png"
 import germany from "../assets/images/germany.png"
 import nimbus from "../assets/images/nimbus.png"
 export const projects = [
+  {
+    title: "Preview My Professor - San Jose State University",
+    desc: "PMP is a powerful course lookup tool that reduces search time from 5 minutes to just a few seconds..",
+    tags: [
+      { name: "AWS Aurora RDS", color: "blue-300" },
+      { name: "PostgreSQL", color: "blue-300" },
+      { name: "GCP", color: "white-300" },
+      { name: "CI/CD with GCP", color: "white-300" },
+      { name: "Flask", color: "blue-600" },
+
+
+    ],
+    img: pmp,
+    link: "https://www.previewmyprofessor.com/",
+    code: "https://github.com/ShangchenHsieh/preview-my-professor",
+  },
   {
     title: "NexGen AI",
     desc: "NextGen AI is a AI powered cover letter generator that automate the process of generation, formatting, and download.",
