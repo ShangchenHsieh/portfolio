@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-4xl mx-auto pb-20">
         {/* Main heading */}
         <div className="mb-8">
           <h1
@@ -38,10 +38,10 @@ export default function Home() {
               <Typewriter
                 options={{
                   strings: [
-                    "👋 I'm Shangchen Hsieh",
-                    "Full-Stack Developer",
-                    "Computer Science Student at SJSU",
-                    "Building the Future, One Line at a Time"
+                    "👋 I'm Sean",
+                    "Software Developer",
+                    "Building the Future, One Line at a Time",
+                    "Keep dreaming, keep building"
                   ],
                   delay: 50,
                   pauseFor: 2000,
@@ -96,11 +96,12 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 left-[20%] transform -translate-x-1/2 flex flex-col items-left"
           data-aos="fade-up"
           data-aos-delay="1600"
           data-aos-duration="800"
         >
+
           <a
             href="#about"
             className="flex flex-col items-center text-zinc-500 hover:text-blue-400 transition-colors group"

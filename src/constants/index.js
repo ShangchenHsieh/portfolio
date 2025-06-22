@@ -34,8 +34,8 @@ export const projects = [
       },
     ],
     img: nexGen,
-    link: "https://nexgen-cover-letter-generator-986061347733.us-central1.run.app",
-    code: "https://nexgen-cover-letter-generator-986061347733.us-central1.run.app",
+    link: "https://https://nexgen-ai-cover-letter-generator-195913554814.us-central1.run.app/",
+    code: "https://https://nexgen-ai-cover-letter-generator-195913554814.us-central1.run.app/",
   },
   {
     title: "Nimbus Cloud Banking",

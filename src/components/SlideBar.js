@@ -4,8 +4,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { useState, useEffect } from "react";
 import "../componentStyling/SlideBar.css"
-import { Button } from "@mui/material";
-import coffee from "../assets/images/buy_me_a_coffee.jpg"
 
 export default function Slidebar() {
   const [select, setSelect] = useState(0);
@@ -66,7 +64,7 @@ export default function Slidebar() {
         <div data-aos="slide-down" className="mb-4">
           <div className="relative inline-block">
             <img
-              src={require("../assets/images/MyImage.webp")}
+              src={require("../assets/images/MyImage.jpg")}
               alt="Shangchen Hsieh"
               className="rounded-full border-2 border-zinc-600 hover:border-blue-500 cursor-pointer mx-auto max-w-[180px] w-full aspect-square object-cover transition-all duration-300"
             />
@@ -86,11 +84,10 @@ export default function Slidebar() {
               key={index}
               href={item.href}
               onClick={() => setSelect(index)}
-              className={`block py-3 px-4 rounded-lg font-medium transition-all duration-300 relative group ${
-                select === index || activeSection === item.id
-                  ? "text-blue-400 bg-blue-500/10 border border-blue-500/20" 
-                  : "text-zinc-300 hover:text-blue-400 hover:bg-zinc-800/50"
-              }`}
+              className={`block py-3 px-4 rounded-lg font-medium transition-all duration-300 relative group ${select === index || activeSection === item.id
+                ? "text-blue-400 bg-blue-500/10 border border-blue-500/20"
+                : "text-zinc-300 hover:text-blue-400 hover:bg-zinc-800/50"
+                }`}
               data-aos="slide-right"
               data-aos-delay={index * 100}
             >
@@ -123,35 +120,10 @@ export default function Slidebar() {
           })}
         </div>
 
-        {/* Buy Me a Coffee */}
-        <div 
-          className="pt-4"
-          data-aos="slide-up"
-          data-aos-delay="800"
-        >
-          <Button
-            onClick={() => window.open("https://www.paypal.com/paypalme/buyseanacoffee", "_blank")}
-            className="w-full p-0 normal-case"
-            sx={{ 
-              borderRadius: '12px',
-              overflow: 'hidden',
-              '&:hover': {
-                transform: 'translateY(-2px)',
-                boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)'
-              },
-              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-            }}
-          >
-            <img 
-              src={coffee} 
-              alt="Buy Me a Coffee" 
-              className="w-full max-w-[140px] h-auto rounded-lg"
-            />
-          </Button>
-        </div>
+
 
         {/* Status Indicator */}
-        <div 
+        <div
           className="mt-6 pt-4 border-t border-zinc-800"
           data-aos="fade-up"
           data-aos-delay="1000"

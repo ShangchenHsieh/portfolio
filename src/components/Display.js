@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import "../App.css";
 
 export default function Display() {
+  // eslint-disable-next-line
   const [padding, setPadding] = useState('25%');
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Display() {
         <Contact />
       </div>
     </div>
-    
+
 
   );
 }

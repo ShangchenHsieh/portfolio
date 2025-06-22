@@ -4,18 +4,28 @@ import aws_cloud from "../../assets/files/aws_cloud.pdf"
 
 export default function Resume() {
   const skills = [
-    { name: "Python", percent: 90 },
-    { name: "JavaScript", percent: 85 },
-    { name: "Java", percent: 80 },
-    { name: "React", percent: 85 },
-    { name: "Node.js", percent: 80 },
-    { name: "AWS", percent: 75 }
+    { name: "Problem Solving", percent: 100 },
+    { name: "Collaborative", percent: 100 },
+    { name: "Interpsersonal", percent: 100 },
+    { name: "Goal-driven", percent: 100 },
   ];
 
   const experiences = [
     {
+      title: "Research Assistant - San Jose State University",
+      date: "Jul 2025 - Present",
+      type: "work",
+      description: "",
+    },
+    {
+      title: "Software Engineer Intern - BERCERITA",
+      date: "Apr. 2025 - Aug. 2025",
+      type: "work",
+      description: "",
+    },
+    {
       title: "AWS Cloud Practitioner Certification",
-      date: "March 14, 2025",
+      date: "Mar. 14, 2025",
       type: "certification",
       description: "Achieved AWS Cloud Practitioner certification, demonstrating foundational knowledge of AWS cloud services and best practices.",
       link: aws_cloud,
@@ -28,20 +38,20 @@ export default function Resume() {
       description: "Bachelor's degree at San Jose State University with focus on software engineering and machine learning.",
     },
     {
-      title: "Guest Speaker - International Gateways",
-      date: "November 16, 2023",
-      type: "speaking",
+      title: "Guest Speaker at International Gateways",
+      date: "Nov. 16, 2023",
+      type: "work",
       description: "Shared academic journey experiences with international students at San Jose State University, providing guidance and insights for similar career paths.",
     },
     {
-      title: "Backend Developer at Developer's Guild",
-      date: "Fall 2021 - Summer 2022",
+      title: "Developer Intern - Developer's Guild",
+      date: "Aug. 2021 - May 2022",
       type: "work",
       description: [
         "Designed a blog posting system with REST APIs using Spring Boot framework, ensuring scalability and efficient resource utilization",
         "Optimized SQL queries in MySQL for efficient data management, resulting in 13% improvement in query performance",
         "Utilized Docker and GitHub Actions for CI/CD, enhancing testing and version release efficiency",
-        "Deployed dockerized application on Digital Ocean with 93% uptime and high-traffic load elasticity"
+        "Deployed dockerized application on Digital Ocean with consistent uptime and high-traffic load elasticity"
       ]
     }
   ];
@@ -81,23 +91,23 @@ export default function Resume() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 
+          <h2
             className="head text-5xl md:text-6xl font-bold mb-6"
             data-aos="fade-up"
           >
             My <span className="gradient-text">Journey</span>
           </h2>
-          <div 
+          <div
             className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"
             data-aos="fade-up"
             data-aos-delay="200"
           ></div>
-          <p 
+          <p
             className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed"
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            A timeline of my professional growth, education, and key achievements 
+            A timeline of my professional growth, education, and key achievements
             in the world of technology and software development.
           </p>
         </div>
@@ -105,20 +115,20 @@ export default function Resume() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Experience Timeline */}
           <div className="space-y-8">
-            <h3 
+            <h3
               className="text-3xl font-bold mb-8 gradient-text"
               data-aos="fade-right"
             >
               Experience & Education
             </h3>
-            
+
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
-              
+
               <div className="space-y-8">
                 {experiences.map((exp, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="relative flex gap-6"
                     data-aos="fade-right"
@@ -128,14 +138,14 @@ export default function Resume() {
                     <div className="flex-shrink-0 w-12 h-12 bg-zinc-800 border-4 border-blue-500 rounded-full flex items-center justify-center relative z-10">
                       {getIcon(exp.type)}
                     </div>
-                    
+
                     {/* Content */}
                     <div className="flex-1 modern-card">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                         <h4 className="text-xl font-bold text-white">{exp.title}</h4>
                         <span className="text-sm text-zinc-400 font-medium">{exp.date}</span>
                       </div>
-                      
+
                       {Array.isArray(exp.description) ? (
                         <ul className="space-y-2 text-zinc-300">
                           {exp.description.map((item, i) => (
@@ -148,7 +158,7 @@ export default function Resume() {
                       ) : (
                         <p className="text-zinc-300 mb-4">{exp.description}</p>
                       )}
-                      
+
                       {exp.link && (
                         <a
                           href={exp.link}
@@ -171,13 +181,13 @@ export default function Resume() {
 
           {/* Skills Section */}
           <div className="space-y-8">
-            <h3 
+            <h3
               className="text-3xl font-bold mb-8 gradient-text"
               data-aos="fade-left"
             >
               Technical Skills
             </h3>
-            
+
             <div className="modern-card space-y-6">
               {skills.map((skill, index) => (
                 <BarGraph
@@ -190,7 +200,7 @@ export default function Resume() {
             </div>
 
             {/* Resume Download */}
-            <div 
+            <div
               className="modern-card text-center"
               data-aos="fade-left"
               data-aos-delay="600"

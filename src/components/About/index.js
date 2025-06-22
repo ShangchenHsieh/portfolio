@@ -12,18 +12,16 @@ export default function About() {
   }
 
   const skills = [
-    "Backend Development",
-    "Machine Learning",
-    "Full-Stack Development",
-    "Cloud Computing",
-    "Database Design",
-    "API Development"
+    "Fullstack Development",
+    "Database Systems",
+    "AWS Cloud Services",
+    "AI / ML Integration",
   ];
 
   const interests = [
-    "🏸 Badminton",
-    "🥋 Brazilian Jiu-Jitsu",
     "💪 Bodybuilding",
+    "🏸 Badminton",
+    "📖 Reading",
   ];
 
   return (
@@ -60,9 +58,9 @@ export default function About() {
                 Hi, I'm <span className="gradient-text">Sean</span>
               </h3>
               <p className="text-zinc-300 text-lg leading-relaxed mb-6">
-                A passionate graduate Computer Science student at San Jose State University,
-                specializing in backend development and Machine Learning. I bring dedication
-                and innovation to every project I work on.
+                A passionate software developer,
+                specializing in fullstack development and AI/ML implementation.
+                I bring dedication and innovation to every project I work on.
               </p>
               <p className="text-zinc-300 text-lg leading-relaxed">
                 Beyond academics, I enjoy customizing hardware peripherals like desktops
@@ -173,10 +171,10 @@ export default function About() {
           data-aos-duration="800"
         >
           {[
-            { number: "4+", label: "Years Experience" },
-            { number: "15+", label: "Projects Completed" },
+            { number: "2+", label: "Years Experience" },
+            { number: "10+", label: "Projects Completed" },
             { number: "5+", label: "Technologies Mastered" },
-            { number: "100%", label: "Dedication" }
+            { number: "300%", label: "Dedication" }
           ].map((stat, index) => (
             <div key={index} className="text-center modern-card">
               <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">

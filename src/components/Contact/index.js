@@ -16,16 +16,16 @@ import animationData from "../../assets/Animation - 1717656274304.json"
 export default function Contact() {
   const [mailSent, setMailSent] = useState(false);
   const [loading, setLoading] = useState(false);
-  
+
   const handleSubmit = (e) => {
     setLoading(true);
     e.preventDefault();
     const { username, email, message } = e.target.elements;
-    
-    const REACT_APP_SERVICEID = "service_vlur9ss"
-    const REACT_APP_TEMPLATE = "template_l8f3775"
-    const REACT_APP_PUBLICKEY = "SU5S1S93hiVwUuA-n"
-    
+
+    const REACT_APP_SERVICEID = "service_q1f3cpm"
+    const REACT_APP_TEMPLATE = "template_j8f8l2a"
+    const REACT_APP_PUBLICKEY = "7zvBqdgumnreHvgyM"
+
     const templateParams = {
       username: username.value,
       email: email.value,
@@ -76,7 +76,8 @@ export default function Contact() {
     loop: true,
     autoplay: true,
     animationData: animationData,
-    renderer: 'svg'
+    renderer: 'svg',
+
   }
 
   const socialLinks = [
@@ -108,36 +109,36 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 
+          <h2
             className="head text-5xl md:text-6xl font-bold mb-6"
             data-aos="fade-up"
           >
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <div 
+          <div
             className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"
             data-aos="fade-up"
             data-aos-delay="200"
           ></div>
-          <p 
+          <p
             className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed"
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            Ready to bring your ideas to life? Let's discuss your next project 
+            Ready to bring your ideas to life? Let's discuss your next project
             and explore how we can work together.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <div 
+          <div
             className="modern-card"
             data-aos="fade-right"
             data-aos-duration="800"
           >
             <h3 className="text-2xl font-bold mb-6 gradient-text">Send me a message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
               <div className="space-y-2">
@@ -207,10 +208,10 @@ export default function Contact() {
                   >
                     <EmailIcon className="w-5 h-5" />
                     <span>Send Message</span>
-                    <svg 
-                      className="w-4 h-4 transition-transform group-hover:translate-x-1" 
-                      fill="none" 
-                      stroke="currentColor" 
+                    <svg
+                      className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -247,34 +248,35 @@ export default function Contact() {
           {/* Contact Info & Animation */}
           <div className="space-y-8">
             {/* Animation */}
-            <div 
+            <div
               className="flex justify-center"
               data-aos="fade-left"
               data-aos-duration="800"
             >
               <div className="relative">
                 <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
-                
+                <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
                 <div className="relative glass-light p-8 rounded-3xl">
                   <Lottie
                     options={defaultOptions}
                     height={300}
                     width={400}
+                    speed={0.4}
                   />
                 </div>
               </div>
             </div>
 
             {/* Contact Info */}
-            <div 
+            <div
               className="modern-card text-center"
               data-aos="fade-left"
               data-aos-delay="200"
               data-aos-duration="800"
             >
               <h3 className="text-2xl font-bold mb-6">Connect with me</h3>
-              
+
               <div className="flex justify-center gap-6 mb-6">
                 {socialLinks.map((social, index) => {
                   const IconComponent = social.icon;
@@ -298,7 +300,7 @@ export default function Contact() {
                   </svg>
                   <span>Available for opportunities</span>
                 </div>
-                
+
                 <div className="flex items-center justify-center gap-2">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -309,7 +311,7 @@ export default function Contact() {
             </div>
 
             {/* Quick Contact Options */}
-            <div 
+            <div
               className="modern-card"
               data-aos="fade-left"
               data-aos-delay="400"
@@ -317,7 +319,7 @@ export default function Contact() {
             >
               <h4 className="text-lg font-semibold mb-4 gradient-text">Prefer other ways to connect?</h4>
               <div className="space-y-3">
-                <a 
+                <a
                   href="mailto:your.email@example.com"
                   className="flex items-center gap-3 p-3 bg-zinc-800/30 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 group"
                 >
@@ -329,8 +331,8 @@ export default function Contact() {
                     <div className="text-sm text-zinc-400">Quick response guaranteed</div>
                   </div>
                 </a>
-                
-                <a 
+
+                <a
                   href="https://www.linkedin.com/in/shang-chen-hsieh-598167222/"
                   target="_blank"
                   rel="noreferrer"
