@@ -95,12 +95,15 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div
-          className="absolute bottom-8 left-[20%] transform -translate-x-1/2 flex flex-col items-left"
-          data-aos="fade-up"
-          data-aos-delay="1600"
-          data-aos-duration="800"
-        >
+        <div>
+          <div
+            className="absolute bottom-8 left-[20%] transform -translate-x-1/2 flex flex-col items-left"
+            data-aos="fade-up"
+            data-aos-delay="1600"
+            data-aos-duration="800"
+          >
+          </div>
+
 
           <a
             href="#about"
