@@ -3,8 +3,6 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import PersonIcon from "@mui/icons-material/Person";
 import FileDownloadDoneIcon from "@mui/icons-material/FileDownloadDone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
@@ -79,27 +77,6 @@ export default function Contact() {
     renderer: 'svg',
 
   }
-
-  const socialLinks = [
-    {
-      icon: GitHubIcon,
-      url: "https://github.com/ShangchenHsieh",
-      label: "GitHub",
-      color: "hover:text-gray-300"
-    },
-    {
-      icon: LinkedInIcon,
-      url: "https://www.linkedin.com/in/shang-chen-hsieh-598167222/",
-      label: "LinkedIn",
-      color: "hover:text-blue-400"
-    },
-    {
-      icon: InstagramIcon,
-      url: "https://www.instagram.com/seanch.h___/",
-      label: "Instagram",
-      color: "hover:text-pink-400"
-    }
-  ];
 
   return (
     <div
