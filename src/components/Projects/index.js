@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 py-20 px-4"
+      className="section-container min-h-screen px-4"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -17,7 +17,7 @@ export default function Projects() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <div 
-            className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6"
+            className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full mb-6 shadow-lg"
             data-aos="fade-up"
             data-aos-delay="200"
           ></div>

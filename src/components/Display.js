@@ -31,7 +31,7 @@ export default function Display() {
 
   return (
     <div className='main-content-container'>
-      <div className={`pl-25 w-screen back text-white`}>
+      <div className={`pl-25 w-screen back text-white relative`}>
         <Home />
         <About />
         <Resume />

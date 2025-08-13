@@ -9,11 +9,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
+    <div className="section-container min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-float-enhanced"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500 to-emerald-600 rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-float-enhanced" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-400 to-emerald-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto pb-20">

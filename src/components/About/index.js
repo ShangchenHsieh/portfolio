@@ -27,7 +27,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 py-20 px-4"
+      className="section-container min-h-screen px-4"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -39,7 +39,7 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h2>
           <div
-            className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"
+            className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full shadow-lg"
             data-aos="fade-up"
             data-aos-delay="200"
           ></div>

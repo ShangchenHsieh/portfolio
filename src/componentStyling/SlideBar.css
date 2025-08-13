@@ -1,13 +1,14 @@
 .slidebar-container {
   flex: none;
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(17, 17, 17, 0.95) 100%);
-  backdrop-filter: blur(20px);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(17, 17, 17, 0.95) 100%);
+  backdrop-filter: blur(30px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
   height: 100vh;
   min-width: 20%;
   position: fixed;
   z-index: 1000;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .slidebar-container::before {
@@ -15,9 +16,20 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 1px;
+  width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.5) 50%, transparent 100%);
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(59, 130, 246, 0.3) 20%, 
+    rgba(139, 92, 246, 0.5) 50%, 
+    rgba(16, 185, 129, 0.3) 80%, 
+    transparent 100%);
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
 }
 
 /* Profile image hover effect */
@@ -34,6 +46,8 @@
 .slidebar-container .nav p {
   position: relative;
   overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slidebar-container .nav p::before {
@@ -43,22 +57,28 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-  transition: left 0.5s;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.15), transparent);
+  transition: left 0.6s;
+  border-radius: 12px;
 }
 
 .slidebar-container .nav p:hover::before {
   left: 100%;
 }
 
+.slidebar-container .nav p:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
 /* Social icons */
 .slidebar-container svg {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slidebar-container svg:hover {
-  transform: translateY(-2px);
-  filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(59, 130, 246, 0.4));
 }
 
 /* Buy me a coffee button */
