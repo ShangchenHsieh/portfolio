@@ -12,7 +12,7 @@ export default function Slidebar() {
   // Auto-detect active section based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'resume', 'projects', 'contact'];
+      const sections = ['home', 'about', 'resume', 'projects', 'certificates', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -36,6 +36,7 @@ export default function Slidebar() {
     { label: "About Me", href: "#about", id: "about" },
     { label: "Experience", href: "#resume", id: "resume" },
     { label: "Projects", href: "#projects", id: "projects" },
+    { label: "Certificates", href: "#certificates", id: "certificates" },
     { label: "Contact", href: "#contact", id: "contact" }
   ];
 

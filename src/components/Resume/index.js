@@ -13,23 +13,20 @@ export default function Resume() {
   const experiences = [
     {
       title: "Research Assistant - San Jose State University",
-      date: "Jul 2025 - Present",
+      date: "July 2025 - Present",
       type: "work",
-      description: "",
+      description: ["Engineered and integrated core functionalities for KIRA, a gamified English-learning platform, boosting engagement among Indonesian elementary students.",
+        "Orchestrated Agile workflows within a cross-functional team of 3 engineers, 1 UI/UX designer, and 1 project manager, accelerating development to achieve 70% product completion within 4 months.",
+        "Architected an agentic system powered by a state machine to autonomously generate AI-driven weekly quizzes, improving content delivery efficiency.",
+        "Built a fully automated CI/CD pipeline leveraging GitHub Actions, Docker, Amazon S3, and AWS Elastic Beanstalk, with integrated unit testing — reducing deployment overhead by 120 man-hours per quarter.",
+        "Deployed a scalable email-based notification system via AWS Simple Email Service (SES) to streamline user communication and improve retention."
+      ]
     },
     {
       title: "Software Engineer Intern - BERCERITA",
-      date: "Apr. 2025 - Aug. 2025",
+      date: "April 2025 - August 2025",
       type: "work",
       description: "",
-    },
-    {
-      title: "AWS Cloud Practitioner Certification",
-      date: "Mar. 14, 2025",
-      type: "certification",
-      description: "Achieved AWS Cloud Practitioner certification, demonstrating foundational knowledge of AWS cloud services and best practices.",
-      link: aws_cloud,
-      linkText: "Download Certificate"
     },
     {
       title: "Bachelor of Science in Computer Science",
@@ -39,19 +36,17 @@ export default function Resume() {
     },
     {
       title: "Guest Speaker at International Gateways",
-      date: "Nov. 16, 2023",
+      date: "November 16, 2023",
       type: "work",
       description: "Shared academic journey experiences with international students at San Jose State University, providing guidance and insights for similar career paths.",
     },
     {
       title: "Developer Intern - Developer's Guild",
-      date: "Aug. 2021 - May 2022",
+      date: "August 2021 - May 2022",
       type: "work",
       description: [
         "Designed a blog posting system with REST APIs using Spring Boot framework, ensuring scalability and efficient resource utilization",
         "Optimized SQL queries in MySQL for efficient data management, resulting in 13% improvement in query performance",
-        "Utilized Docker and GitHub Actions for CI/CD, enhancing testing and version release efficiency",
-        "Deployed dockerized application on Digital Ocean with consistent uptime and high-traffic load elasticity"
       ]
     }
   ];

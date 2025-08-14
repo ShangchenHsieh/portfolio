@@ -3,6 +3,12 @@ import nexGen from "../assets/images/nexgen.png"
 import pmp from "../assets/images/pmp_pic.png"
 import germany from "../assets/images/germany.png"
 import nimbus from "../assets/images/nimbus.png"
+import awsCert from "../assets/files/aws_cloud.pdf"
+import udemyCert from "../assets/files/udemy_certificate.pdf"
+import nvidiaDeepLearning from "../assets/files/NVIDIA_Getting_Started_with_Deep_Learning.pdf"
+import nvidiaAICourse from "../assets/files/NVIDIA AI for All From Basics to GenAI Practice_AI for All From Basics to GenAI Practice - Course Completion Certificate.pdf"
+import cloud_pract from "../assets/images/aws_cloud_practitioner.png"
+import nvidia from "../assets/images/nvidia_logo.png"
 export const projects = [
   {
     title: "Preview My Professor - San Jose State University",
@@ -79,25 +85,46 @@ export const projects = [
     link: "", // to be upload
     code: "https://github.com/ShangchenHsieh/Germany-City-Plus",
   },
+];
+
+export const certificates = [
   {
-    title: "Pawfect+",
-    desc: "This robust full-stack application efficiently manages and monitors animal well-being. Integrating Spring Boot and React.js, it offers a user-friendly interface for streamlined animal care, tracking, and health status management.",
+    title: "Getting Started with Deep Learning",
+    issuer: "NVIDIA",
+    date: "2025",
     tags: [
-      {
-        name: "FastAPI",
-        color: "blue-250",
-      },
-      {
-        name: "React JS",
-        color: "blue-400",
-      },
-      {
-        name: "PostgreSQL",
-        color: "blue-300"
-      }
+      { name: "Deep Learning", color: "green-400" },
+      { name: "AI/ML", color: "purple-400" },
+      { name: "Neural Networks", color: "blue-400" },
     ],
-    img: pmtPic,
-    link: "", // to be upload
-    code: "https://github.com/ShangchenHsieh/pet-management-tool",
+    img: nvidia,
+    downloadLink: nvidiaDeepLearning,
+    viewLink: null,
   },
+  {
+    title: "AI for All: From Basics to GenAI Practice",
+    issuer: "NVIDIA",
+    date: "2025",
+    tags: [
+      { name: "Artificial Intelligence", color: "purple-400" },
+      { name: "Generative AI", color: "green-400" },
+      { name: "Machine Learning", color: "blue-400" },
+    ],
+    img: nvidia,
+    downloadLink: nvidiaAICourse,
+    viewLink: null,
+  },
+  {
+    title: "AWS Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    date: "2024",
+    tags: [
+      { name: "AWS", color: "orange-400" },
+      { name: "Cloud Computing", color: "blue-400" },
+      { name: "Infrastructure", color: "green-400" },
+    ],
+    img: cloud_pract, // Placeholder image
+    downloadLink: awsCert,
+    viewLink: null,
+  }
 ];

@@ -3,6 +3,7 @@ import Home from "./Home";
 import About from "./About";
 import Resume from "./Resume";
 import Projects from "./Projects";
+import Certificates from "./Certificates";
 import Contact from "./Contact";
 import "../App.css";
 
@@ -36,6 +37,7 @@ export default function Display() {
         <About />
         <Resume />
         <Projects />
+        <Certificates />
         <Contact />
       </div>
     </div>

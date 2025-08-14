@@ -5,34 +5,34 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="section-container min-h-screen px-4"
+      className="section-container min-h-screen px-8 md:px-12 lg:px-16"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 
+          <h2
             className="head text-5xl md:text-6xl font-bold mb-6"
             data-aos="fade-up"
           >
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div 
+          <div
             className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full mb-6 shadow-lg"
             data-aos="fade-up"
             data-aos-delay="200"
           ></div>
-          <p 
+          <p
             className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed"
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            A showcase of my recent work, featuring full-stack applications, 
+            A showcase of my recent work, featuring full-stack applications,
             machine learning projects, and innovative solutions built with modern technologies.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -54,7 +54,7 @@ export default function Projects() {
         </div>
 
         {/* Call to Action */}
-        <div 
+        <div
           className="text-center mt-16"
           data-aos="fade-up"
           data-aos-delay="600"
@@ -66,15 +66,15 @@ export default function Projects() {
             <p className="text-zinc-400 mb-6 max-w-md">
               I'm always open to discussing new opportunities and exciting projects.
             </p>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="btn-primary inline-flex items-center gap-2 group"
             >
               <span>Get In Touch</span>
-              <svg 
-                className="w-4 h-4 transition-transform group-hover:translate-x-1" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
