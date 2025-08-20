@@ -15,18 +15,18 @@ export default function Resume() {
       title: "Research Assistant - San Jose State University",
       date: "July 2025 - Present",
       type: "work",
-      description: ["Engineered and integrated core functionalities for KIRA, a gamified English-learning platform, boosting engagement among Indonesian elementary students.",
-        "Orchestrated Agile workflows within a cross-functional team of 3 engineers, 1 UI/UX designer, and 1 project manager, accelerating development to achieve 70% product completion within 4 months.",
-        "Architected an agentic system powered by a state machine to autonomously generate AI-driven weekly quizzes, improving content delivery efficiency.",
-        "Built a fully automated CI/CD pipeline leveraging GitHub Actions, Docker, Amazon S3, and AWS Elastic Beanstalk, with integrated unit testing — reducing deployment overhead by 120 man-hours per quarter.",
-        "Deployed a scalable email-based notification system via AWS Simple Email Service (SES) to streamline user communication and improve retention."
-      ]
+      description: "Conduct research in dynamic rupture modeling using SeisSol, running large-scale simulations on high-performance computing clusters."
     },
     {
       title: "Software Engineer Intern - BERCERITA",
       date: "April 2025 - August 2025",
       type: "work",
-      description: "",
+      description: ["Engineered and integrated core functionalities for KIRA, a gamified English-learning platform, boosting engagement among Indonesian elementary students.",
+        "Orchestrated Agile workflows within a cross-functional team of 3 engineers, 1 UI/UX designer, and 1 project manager, accelerating development to achieve 70% product completion within 4 months.",
+        "Architected an agentic system powered by a state machine to autonomously generate AI-driven weekly quizzes, improving content delivery efficiency.",
+        "Built a fully automated CI/CD pipeline leveraging GitHub Actions, Docker, Amazon S3, and AWS Elastic Beanstalk, with integrated unit testing — reducing deployment overhead by 120 man-hours per quarter.",
+        "Deployed a scalable email-based notification system via AWS Simple Email Service (SES) to streamline user communication and improve retention."
+      ],
     },
     {
       title: "Bachelor of Science in Computer Science",
@@ -180,7 +180,7 @@ export default function Resume() {
               className="text-3xl font-bold mb-8 gradient-text"
               data-aos="fade-left"
             >
-              Technical Skills
+              Soft Skills
             </h3>
 
             <div className="modern-card space-y-6">
