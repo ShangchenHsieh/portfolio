@@ -12,10 +12,16 @@ export default function Resume() {
 
   const experiences = [
     {
+      title: "Teaching Assistant - San Jose State University",
+      date: "September 2025 - Present",
+      type: "work",
+      description: "Computing Practice and Programming course, assisting students in mastering programming concepts and practical coding skills via conducting code reviews, pair programming sessions, and leading discussion sections."
+    },
+    {
       title: "Research Assistant - San Jose State University",
       date: "July 2025 - Present",
       type: "work",
-      description: "Conduct research in dynamic rupture modeling using SeisSol, running large-scale simulations on high-performance computing clusters."
+      description: "Conduct research in dynamic rupture modeling using SeisSol, running large-scale simulations on high-performance computing clusters and visualization with Paraview."
     },
     {
       title: "Software Engineer Intern - BERCERITA",
