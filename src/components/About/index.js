@@ -64,8 +64,7 @@ export default function About() {
               </p>
               <p className="text-zinc-300 text-lg leading-relaxed">
                 Beyond academics, I enjoy customizing hardware peripherals like desktops
-                and keyboards. I maintain a healthy work-life balance through badminton,
-                Brazilian Jiu-Jitsu, and bodybuilding.
+                and keyboards. I maintain a healthy work-life balance through badminton and bodybuilding.
               </p>
             </div>
 

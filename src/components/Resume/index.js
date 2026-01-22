@@ -12,8 +12,17 @@ export default function Resume() {
 
   const experiences = [
     {
+      title: "Backend Engineer - BERCERITA",
+      date: "November 2025 - January 2026",
+      type: "work",
+      description: [
+        "Improved quiz-taking experience by implementing CloudFront caching, reducing image load times by over 90% (2–3seconds to 150 ms) when accessing from Indonesia.",
+        "Refactored API codebase to modularize endpoints, improve readability, and simplify future feature development."
+      ],
+    },
+    {
       title: "Teaching Assistant - San Jose State University",
-      date: "September 2025 - Present",
+      date: "September 2025 - December 2025",
       type: "work",
       description: "Computing Practice and Programming course, assisting students in mastering programming concepts and practical coding skills via conducting code reviews, pair programming sessions, and leading discussion sections."
     },
@@ -24,7 +33,7 @@ export default function Resume() {
       description: "Conduct research in dynamic rupture modeling using SeisSol, running large-scale simulations on high-performance computing clusters and visualization with Paraview."
     },
     {
-      title: "Software Engineer Intern - BERCERITA",
+      title: "Software Engineer - BERCERITA",
       date: "April 2025 - August 2025",
       type: "work",
       description: ["Engineered and integrated core functionalities for KIRA, a gamified English-learning platform, boosting engagement among Indonesian elementary students.",
