@@ -1,6 +1,6 @@
 import BarGraph from "./BarGraph";
 import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf"
-import aws_cloud from "../../assets/files/aws_cloud.pdf"
+// import aws_cloud from "../../assets/files/aws_cloud.pdf"
 
 export default function Resume() {
   const skills = [
