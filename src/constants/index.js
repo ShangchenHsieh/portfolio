@@ -4,6 +4,7 @@ import pmp from "../assets/images/pmp_pic.png"
 import germany from "../assets/images/germany.png"
 import nimbus from "../assets/images/nimbus.png"
 import awsCert from "../assets/files/aws_cloud.pdf"
+import kira from "../assets/images/kira.png"
 // import udemyCert from "../assets/files/udemy_certificate.pdf"
 import nvidiaDeepLearning from "../assets/files/NVIDIA_Getting_Started_with_Deep_Learning.pdf"
 import nvidiaAICourse from "../assets/files/NVIDIA AI for All From Basics to GenAI Practice_AI for All From Basics to GenAI Practice - Course Completion Certificate.pdf"
@@ -11,8 +12,24 @@ import cloud_pract from "../assets/images/aws_cloud_practitioner.png"
 import nvidia from "../assets/images/nvidia_logo.png"
 export const projects = [
   {
+    title: "KIRA",
+    desc: "Kids Interactive Reinforcement Application (KIRA) is a AI-powered educational platform that provides gamified learning experiences for children, adapting content and activities based on their progress and preferences.",
+    tags: [
+      { name: "AWS", color: "orange-300" },
+      { name: "AI-Agent", color: "blue-300" },
+      { name: "GitHub Action", color: "white-300" },
+      { name: "FastAPI", color: "blue-600" },
+      { name: "NextJS", color: "yellow-300" },
+
+
+    ],
+    img: kira,
+    link: "https://kiraclassroom.com/",
+    code: "https://www.bercerita.org/",
+  },
+  {
     title: "Preview My Professor - San Jose State University",
-    desc: "PMP is a powerful course lookup tool that reduces search time from 5 minutes to just a few seconds..",
+    desc: "PMP is a powerful course lookup tool that reduces search time from 5 minutes to just a few seconds.",
     tags: [
       { name: "AWS Aurora RDS", color: "blue-300" },
       { name: "PostgreSQL", color: "blue-300" },
