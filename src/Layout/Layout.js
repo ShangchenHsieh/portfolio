@@ -1,33 +1,26 @@
 import React from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import "../App.css";
 
 class Layout extends React.Component {
   componentDidMount = () => {
+    const initAos = () => {
+      Promise.all([import("aos"), import("aos/dist/aos.css")]).then(([aosModule]) => {
+        const Aos = aosModule.default;
 
-    // Initialize AOS with better settings
-    const options = {
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 50
-    };
-    Aos.init(options);
-
-    // Smooth scroll behavior
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+        Aos.init({
+          duration: 800,
+          easing: 'ease-out-cubic',
+          once: true,
+          offset: 50,
+        });
       });
-    });
+    };
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(initAos, { timeout: 2000 });
+    } else {
+      window.setTimeout(initAos, 300);
+    }
   };
 
   render() {

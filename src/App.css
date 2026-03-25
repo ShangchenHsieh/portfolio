@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 @font-face {
   font-family: "Roboto_slab";
+  font-display: swap;
   src: local("Roboto_slab"),
     url(./fonts/Roboto_slab/RobotoSlab-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Gilda_display";
+  font-display: swap;
   src: local("Gilda_display"),
     url(./fonts/Gilda_display/GildaDisplay-Regular.ttf) format("truetype");
 }
@@ -15,6 +15,7 @@
 @font-face {
   font-family: "Roboto_slab";
   font-weight: 900;
+  font-display: swap;
   src: local("Roboto_slab"),
     url(./fonts/Roboto_slab/RobotoSlab-Bold.ttf) format("truetype");
 }
@@ -22,6 +23,7 @@
 @font-face {
   font-family: "Roboto_slab";
   font-weight: 900;
+  font-display: swap;
   src: local("Roboto_slab"),
     url(./fonts/Roboto_slab/RobotoSlab-Black.ttf) format("truetype");
 }
@@ -56,7 +58,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Roboto_slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   background: var(--primary-bg);
   color: var(--text-primary);
   line-height: 1.6;
@@ -65,31 +67,31 @@ body {
 
 /* Typography */
 .name {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto_slab', sans-serif;
   font-weight: 600;
   font-size: 1.125rem;
   letter-spacing: -0.025em;
 }
 
 .head {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Gilda_display', serif;
   font-weight: 700;
   letter-spacing: -0.05em;
 }
 
 .nav {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto_slab', sans-serif;
   font-weight: 500;
 }
 
 .para {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto_slab', sans-serif;
   font-weight: 400;
   line-height: 1.7;
 }
 
 .mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Roboto_slab', monospace;
 }
 
 /* Background and layout */
@@ -610,5 +612,17 @@ body {
 
   100% {
     left: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -1,13 +1,9 @@
-import Typewriter from "typewriter-effect";
-import GraphemeSplitter from "grapheme-splitter";
+import React, { Suspense, lazy } from "react";
 import "../../App.css";
 
-export default function Home() {
-  const stringSplitter = (string) => {
-    const splitter = new GraphemeSplitter();
-    return splitter.splitGraphemes(string);
-  };
+const Typewriter = lazy(() => import("typewriter-effect"));
 
+export default function Home() {
   return (
     <div className="section-container min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
       {/* Background decoration */}
@@ -36,21 +32,22 @@ export default function Home() {
               data-aos-delay="400"
               data-aos-duration="800"
             >
-              <Typewriter
-                options={{
-                  strings: [
-                    "👋 I'm Sean",
-                    "Software Developer",
-                    "Building the Future, One Line at a Time",
-                    "Keep dreaming, keep building"
-                  ],
-                  delay: 50,
-                  pauseFor: 2000,
-                  autoStart: true,
-                  loop: true,
-                  stringSplitter: stringSplitter,
-                }}
-              />
+              <Suspense fallback={<span>Software Developer</span>}>
+                <Typewriter
+                  options={{
+                    strings: [
+                      "I'm Sean",
+                      "Software Developer",
+                      "Building the Future, One Line at a Time",
+                      "Keep dreaming, keep building"
+                    ],
+                    delay: 50,
+                    pauseFor: 2000,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </Suspense>
             </div>
           </div>
         </div>

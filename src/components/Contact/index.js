@@ -1,22 +1,55 @@
-import EmailIcon from "@mui/icons-material/Email";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import PersonIcon from "@mui/icons-material/Person";
-import FileDownloadDoneIcon from "@mui/icons-material/FileDownloadDone";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
-import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useState } from "react";
-import Lottie from "react-lottie";
+import React, { useState } from "react";
+import Lottie from "lottie-react";
 import animationData from "../../assets/Animation - 1717656274304.json"
+
+function EmailIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+  );
+}
+
+function AlternateEmailIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12a4 4 0 10-8 0v1a3 3 0 006 0V9a5 5 0 10-5 5" />
+    </svg>
+  );
+}
+
+function PersonIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 14a4 4 0 10-8 0m8 0a4 4 0 00-8 0m8 0v1a3 3 0 01-3 3h-2a3 3 0 01-3-3v-1" />
+    </svg>
+  );
+}
+
+function SuccessIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 10.34H5.67V18h2.67v-7.66zM7 5.78a1.56 1.56 0 100 3.12 1.56 1.56 0 000-3.12zM18.33 13.5c0-2.3-1.22-3.37-2.85-3.37-1.31 0-1.9.72-2.23 1.22v-1.04h-2.67V18h2.67v-4.26c0-1.13.21-2.22 1.61-2.22 1.38 0 1.4 1.29 1.4 2.3V18h2.67v-4.5z" />
+    </svg>
+  );
+}
 
 export default function Contact() {
   const [mailSent, setMailSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState({ type: "", text: "" });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     setLoading(true);
+    setSubmitMessage({ type: "", text: "" });
     e.preventDefault();
     const { username, email, message } = e.target.elements;
 
@@ -30,53 +63,25 @@ export default function Contact() {
       message: message.value,
     };
 
-    emailjs
-      .send(
+    try {
+      const { default: emailjs } = await import("emailjs-com");
+
+      await emailjs.send(
         REACT_APP_SERVICEID,
         REACT_APP_TEMPLATE,
         templateParams,
         REACT_APP_PUBLICKEY
-      )
-      .then(
-        (response) => {
-          setMailSent(true);
-          setLoading(false);
-          toast.success("Message sent successfully! I'll get back to you soon.", {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (err) => {
-          setLoading(false);
-          toast.error("Something went wrong. Please try again.", {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-          console.log("FAILED...", err);
-        }
       );
+
+      setMailSent(true);
+      setSubmitMessage({ type: "success", text: "Message sent successfully! I'll get back to you soon." });
+    } catch (err) {
+      setSubmitMessage({ type: "error", text: "Something went wrong. Please try again." });
+      console.log("FAILED...", err);
+    } finally {
+      setLoading(false);
+    }
   };
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    renderer: 'svg',
-
-  }
 
   return (
     <div
@@ -214,9 +219,15 @@ export default function Contact() {
                     disabled
                     className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2 cursor-default"
                   >
-                    <FileDownloadDoneIcon className="w-5 h-5" />
+                    <SuccessIcon className="w-5 h-5" />
                     Message Sent Successfully!
                   </button>
+                )}
+
+                {submitMessage.text && (
+                  <p className={`mt-4 text-sm ${submitMessage.type === "error" ? "text-red-400" : "text-green-400"}`}>
+                    {submitMessage.text}
+                  </p>
                 )}
               </div>
             </form>
@@ -236,10 +247,10 @@ export default function Contact() {
 
                 <div className="relative glass-light p-8 rounded-3xl">
                   <Lottie
-                    options={defaultOptions}
-                    height={300}
-                    width={400}
-                    speed={0.4}
+                    animationData={animationData}
+                    loop
+                    autoplay
+                    style={{ height: 300, width: 400 }}
                   />
                 </div>
               </div>
@@ -289,18 +300,6 @@ export default function Contact() {
         </div>
       </div>
 
-      <ToastContainer
-        position="bottom-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
     </div>
   );
 }

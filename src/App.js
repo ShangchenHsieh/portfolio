@@ -1,27 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import Layout from "./Layout/Layout";
 import Display from "./components/Display";
-import Slidebar from "./components/SlideBar";
 import './App.css'; // assuming you have a CSS file for your styles
 
+const Slidebar = lazy(() => import("./components/SlideBar"));
+
 export default function App() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const getIsDesktop = () => (typeof window !== "undefined" ? window.innerWidth > 768 : true);
+  const [isDesktop, setIsDesktop] = useState(getIsDesktop);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+    const mediaQuery = window.matchMedia('(min-width: 769px)');
+    const updateDeviceMode = (event) => {
+      setIsDesktop(event.matches);
     };
 
-    window.addEventListener('resize', handleResize);
+    setIsDesktop(mediaQuery.matches);
+    mediaQuery.addEventListener('change', updateDeviceMode);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      mediaQuery.removeEventListener('change', updateDeviceMode);
     };
   }, []);
 
   return (
     <Layout>
-      {windowWidth > 768 && <Slidebar />} {/* Show Slidebar only if windowWidth is greater than 768 pixels */}
+      {isDesktop && (
+        <Suspense fallback={null}>
+          <Slidebar />
+        </Suspense>
+      )}
       <Display />
     </Layout>
   );

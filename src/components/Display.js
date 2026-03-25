@@ -1,11 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import Home from "./Home";
-import About from "./About";
-import Resume from "./Resume";
-import Projects from "./Projects";
-import Certificates from "./Certificates";
-import Contact from "./Contact";
 import "../App.css";
+
+const About = lazy(() => import("./About"));
+const Resume = lazy(() => import("./Resume"));
+const Projects = lazy(() => import("./Projects"));
+const Certificates = lazy(() => import("./Certificates"));
+const Contact = lazy(() => import("./Contact"));
+
+function LazySection({ id, Component, placeholderClassName }) {
+  const [shouldRender, setShouldRender] = useState(false);
+  const placeholderRef = useRef(null);
+
+  useEffect(() => {
+    if (shouldRender || !placeholderRef.current) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldRender(true);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '400px 0px',
+        threshold: 0.01,
+      }
+    );
+
+    observer.observe(placeholderRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [shouldRender]);
+
+  if (!shouldRender) {
+    return <div id={id} ref={placeholderRef} className={placeholderClassName} aria-hidden="true" />;
+  }
+
+  return (
+    <Suspense fallback={<div id={id} className={placeholderClassName} aria-hidden="true" />}>
+      <Component />
+    </Suspense>
+  );
+}
 
 export default function Display() {
   // eslint-disable-next-line
@@ -34,11 +77,11 @@ export default function Display() {
     <div className='main-content-container'>
       <div className={`pl-25 w-screen back text-white relative`}>
         <Home />
-        <About />
-        <Resume />
-        <Projects />
-        <Certificates />
-        <Contact />
+        <LazySection id="about" Component={About} placeholderClassName="section-container min-h-screen px-4" />
+        <LazySection id="resume" Component={Resume} placeholderClassName="section-container min-h-screen px-4" />
+        <LazySection id="projects" Component={Projects} placeholderClassName="section-container min-h-screen px-8 md:px-12 lg:px-16" />
+        <LazySection id="certificates" Component={Certificates} placeholderClassName="section-container min-h-screen px-8 md:px-12 lg:px-16" />
+        <LazySection id="contact" Component={Contact} placeholderClassName="section-container min-h-screen px-4" />
       </div>
     </div>
 

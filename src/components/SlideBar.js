@@ -1,34 +1,73 @@
 import "../App.css";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import { useState, useEffect } from "react";
 import "../componentStyling/SlideBar.css"
+
+function GitHubIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.2 11.38c.6.11.8-.26.8-.58v-2.03c-3.34.72-4.03-1.42-4.03-1.42-.55-1.38-1.33-1.75-1.33-1.75-1.08-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.3.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.2.69.8.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 10.34H5.67V18h2.67v-7.66zM7 5.78a1.56 1.56 0 100 3.12 1.56 1.56 0 000-3.12zM18.33 13.5c0-2.3-1.22-3.37-2.85-3.37-1.31 0-1.9.72-2.23 1.22v-1.04h-2.67V18h2.67v-4.26c0-1.13.21-2.22 1.61-2.22 1.38 0 1.4 1.29 1.4 2.3V18h2.67v-4.5z" />
+    </svg>
+  );
+}
+
+function InstagramIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm11.5 1.5a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z" />
+    </svg>
+  );
+}
 
 export default function Slidebar() {
   const [select, setSelect] = useState(0);
   const [activeSection, setActiveSection] = useState('');
 
-  // Auto-detect active section based on scroll position
+  // Track active section with IntersectionObserver instead of reading layout on every scroll.
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'resume', 'projects', 'certificates', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+    const sections = ['home', 'about', 'resume', 'projects', 'certificates', 'contact'];
+    const visibleEntries = new Map();
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const element = document.getElementById(sections[i]);
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          setSelect(i);
-          break;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          visibleEntries.set(entry.target.id, entry.intersectionRatio);
+        });
+
+        const sorted = Array.from(visibleEntries.entries())
+          .filter(([, ratio]) => ratio > 0)
+          .sort((a, b) => b[1] - a[1]);
+
+        if (sorted[0]) {
+          const current = sorted[0][0];
+          setActiveSection(current);
+          const activeIndex = sections.indexOf(current);
+          if (activeIndex !== -1) {
+            setSelect(activeIndex);
+          }
         }
+      },
+      {
+        root: null,
+        rootMargin: '-35% 0px -35% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
       }
-    };
+    );
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Call once to set initial state
+    const sectionElements = sections
+      .map((sectionId) => document.getElementById(sectionId))
+      .filter(Boolean);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    sectionElements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
   }, []);
 
   const navItems = [
@@ -53,7 +92,7 @@ export default function Slidebar() {
     },
     {
       icon: InstagramIcon,
-      url: "https://www.instagram.com/seanch.h___/",
+      url: "https://www.instagram.com/sean_chen.h/",
       label: "Instagram"
     }
   ];
@@ -109,14 +148,16 @@ export default function Slidebar() {
           {socialLinks.map((social, index) => {
             const IconComponent = social.icon;
             return (
-              <button
+              <a
                 key={index}
-                onClick={() => window.open(social.url, "_blank")}
+                href={social.url}
+                target="_blank"
+                rel="noreferrer"
                 className="p-3 bg-zinc-800/50 border border-zinc-700 rounded-full hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 group"
                 title={social.label}
               >
                 <IconComponent className="w-5 h-5 text-zinc-400 group-hover:text-blue-400 transition-colors" />
-              </button>
+              </a>
             );
           })}
         </div>

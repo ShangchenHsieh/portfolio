@@ -1,16 +1,9 @@
+import Lottie from "lottie-react";
 import "../../App.css";
 import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf"
 import animationData from "../../assets/Animation - 1717655438885.json"
-import Lottie from "react-lottie";
 
 export default function About() {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    renderer: 'svg'
-  }
-
   const skills = [
     "Fullstack Development",
     "Database Systems",
@@ -153,9 +146,10 @@ export default function About() {
               {/* Animation container */}
               <div className="relative glass-light p-8 rounded-3xl">
                 <Lottie
-                  options={defaultOptions}
-                  height={400}
-                  width={400}
+                  animationData={animationData}
+                  loop
+                  autoplay
+                  style={{ height: 400, width: 400 }}
                 />
               </div>
             </div>
