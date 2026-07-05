@@ -1,15 +1,7 @@
 import "../../App.css";
 import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf";
 import portrait from "../../assets/images/MyImage.jpg";
-
-const FOCUS_AREAS = [
-  "Backend & APIs",
-  "Full-stack Development",
-  "AWS / Cloud",
-  "CI/CD & DevOps",
-  "AI / ML Integration",
-  "Databases",
-];
+import { focusAreas } from "../../constants";
 
 export default function About() {
   return (
@@ -62,7 +54,7 @@ export default function About() {
             <div className="mt-10">
               <p className="label">Focus areas</p>
               <div className="mt-4 flex flex-wrap gap-2">
-                {FOCUS_AREAS.map((area) => (
+                {focusAreas.map((area) => (
                   <span key={area} className="tag">{area}</span>
                 ))}
               </div>
