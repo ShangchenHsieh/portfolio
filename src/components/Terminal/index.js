@@ -81,9 +81,10 @@ export default function TerminalWindow() {
                   </div>
                 )
               )}
-              <div className="term__hint">// type 'help' to explore — or just scroll</div>
+              <div className="term__hint">
+                <span aria-hidden="true">{"//"}</span> type 'help' to explore — or just scroll
+              </div>
             </div>
-            {/* command output is announced; boot transcript above is decorative */}
             <div aria-live="polite">
               <Suspense fallback={<div className="term__out">loading shell…</div>}>
                 <ConsoleEmulator
@@ -131,23 +132,23 @@ export default function TerminalWindow() {
                 </div>
               }
             >
-            <Typewriter
-              options={{ delay: 26, cursor: "▍" }}
-              onInit={(tw) =>
-                tw
-                  .typeString('<span class="term__prompt">$</span> whoami')
-                  .pauseFor(300)
-                  .typeString('<br /><span class="term__out">sean — full-stack &amp; AI engineer, san jose ca</span>')
-                  .pauseFor(350)
-                  .typeString('<br /><span class="term__prompt">$</span> now')
-                  .pauseFor(300)
-                  .typeString('<br /><span class="term__out">▸ building KIRA @ Bercerita</span>')
-                  .typeString('<br /><span class="term__out">▸ earthquake research @ SJSU</span>')
-                  .pauseFor(500)
-                  .callFunction(() => setBooted(true))
-                  .start()
-              }
-            />
+              <Typewriter
+                options={{ delay: 26, cursor: "▍" }}
+                onInit={(tw) =>
+                  tw
+                    .typeString('<span class="term__prompt">$</span> whoami')
+                    .pauseFor(300)
+                    .typeString('<br /><span class="term__out">sean — full-stack &amp; AI engineer, san jose ca</span>')
+                    .pauseFor(350)
+                    .typeString('<br /><span class="term__prompt">$</span> now')
+                    .pauseFor(300)
+                    .typeString('<br /><span class="term__out">▸ building KIRA @ Bercerita</span>')
+                    .typeString('<br /><span class="term__out">▸ earthquake research @ SJSU</span>')
+                    .pauseFor(500)
+                    .callFunction(() => setBooted(true))
+                    .start()
+                }
+              />
             </Suspense>
           </button>
         )}
