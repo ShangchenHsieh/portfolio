@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import TerminalWindow from "./index";
 
 // Force the reduced-motion path: boot renders statically and the emulator
@@ -7,8 +7,8 @@ beforeEach(() => {
   window.matchMedia = (query) => ({
     matches: query.includes("prefers-reduced-motion"),
     media: query,
-    addEventListener: () => {},
-    removeEventListener: () => {},
+    addEventListener: () => { },
+    removeEventListener: () => { },
   });
 });
 
@@ -23,4 +23,15 @@ test("quick-command chips are present", async () => {
   render(<TerminalWindow />);
   await screen.findByRole("textbox");
   expect(screen.getByRole("button", { name: /resume/i })).toBeInTheDocument();
+});
+
+test("clicking anywhere in terminal body focuses shell input", async () => {
+  const { container } = render(<TerminalWindow />);
+  const input = await screen.findByRole("textbox");
+  input.blur();
+
+  const body = container.querySelector(".term__body");
+  fireEvent.click(body);
+
+  expect(input).toHaveFocus();
 });

@@ -39,12 +39,23 @@
   padding: 0.9rem 1rem;
   overflow-y: auto;
   overscroll-behavior: contain;
+  cursor: text;
 }
 
 /* react-console-emulator writes its default #212121 background inline
    (dedicated background prop, applied over the style prop) — tokens must win */
 .term__body div[name^="react-console-emulator"] {
   background: transparent !important;
+}
+
+.term__body div[name^="react-console-emulator"] * {
+  line-height: inherit;
+}
+
+.term__body div[name^="react-console-emulator"] input,
+.term__body div[name^="react-console-emulator"] textarea {
+  margin: 0;
+  vertical-align: baseline;
 }
 
 .term__prompt {

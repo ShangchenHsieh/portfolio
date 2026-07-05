@@ -28,6 +28,7 @@ function prefersReducedMotion() {
 export default function TerminalWindow() {
   const [booted, setBooted] = useState(prefersReducedMotion);
   const termRef = useRef(null);
+  const shellHostRef = useRef(null);
   const { set: setTheme } = useTheme();
 
   const commands = useMemo(
@@ -57,6 +58,18 @@ export default function TerminalWindow() {
     }
   };
 
+  const focusShellInput = () => {
+    const host = shellHostRef.current;
+    if (!host) return;
+    const input = host.querySelector("input, textarea");
+    if (!input || typeof input.focus !== "function") return;
+    input.focus();
+    if (typeof input.setSelectionRange === "function") {
+      const end = input.value?.length ?? 0;
+      input.setSelectionRange(end, end);
+    }
+  };
+
   return (
     <div className="term" role="region" aria-label="Interactive terminal — everything here is also on the page below">
       <div className="term__bar" aria-hidden="true">
@@ -66,7 +79,7 @@ export default function TerminalWindow() {
         <span className="term__title">sean@portfolio:~ — zsh</span>
       </div>
 
-      <div className="term__body">
+      <div className="term__body" onClick={booted ? focusShellInput : undefined}>
         {booted ? (
           <>
             <div aria-hidden="true">
@@ -84,7 +97,7 @@ export default function TerminalWindow() {
               <div className="term__hint"> type 'help' to explore — or just scroll</div>
             </div>
 
-            <div aria-live="polite">
+            <div aria-live="polite" ref={shellHostRef}>
               <Suspense fallback={<div className="term__out">loading shell…</div>}>
                 <ConsoleEmulator
                   ref={termRef}
@@ -101,14 +114,23 @@ export default function TerminalWindow() {
                     fontSize: "inherit",
                     background: "transparent",
                   }}
-                  inputAreaStyle={{ fontFamily: "inherit", background: "transparent" }}
-                  promptLabelStyle={{ color: "var(--accent)", fontFamily: "inherit", fontSize: "inherit" }}
+                  inputAreaStyle={{
+                    fontFamily: "inherit",
+                    lineHeight: "inherit",
+                    background: "transparent",
+                    display: "flex",
+                    alignItems: "baseline",
+                    gap: "0.45ch",
+                  }}
+                  promptLabelStyle={{ color: "var(--accent)", fontFamily: "inherit", fontSize: "inherit", lineHeight: "inherit", margin: 0 }}
                   inputStyle={{
                     color: "var(--text)",
                     fontFamily: "inherit",
                     fontSize: "inherit",
+                    lineHeight: "inherit",
                     border: 0,
                     background: "transparent",
+                    margin: 0,
                     padding: 0,
                   }}
                   inputTextStyle={{ color: "var(--text)" }}
@@ -132,7 +154,7 @@ export default function TerminalWindow() {
               }
             >
               <Typewriter
-                options={{ delay: 26, cursor: "▍" }}
+                options={{ delay: 10, cursor: "▍" }}
                 onInit={(tw) =>
                   tw
                     .typeString('<span class="term__prompt">$</span> whoami')
