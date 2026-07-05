@@ -88,7 +88,7 @@ export function createCommands({ scrollTo, setTheme, openResume, clear }) {
       },
     },
     sudo: {
-      description: "escalate (try 'sudo hire-sean')",
+      description: "try 'sudo hire-sean'",
       fn: (...args) =>
         args.join(" ") === "hire-sean"
           ? `permission granted ✔ — forwarding to ${EMAIL} … (or just run 'contact')`

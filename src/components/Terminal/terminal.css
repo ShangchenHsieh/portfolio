@@ -1,0 +1,108 @@
+/* ============================================================
+   Hero terminal — built entirely from the design tokens
+   ============================================================ */
+
+.term {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: 'JetBrains Mono Variable', ui-monospace, monospace;
+  font-size: 0.82rem;
+  line-height: 1.75;
+  overflow: hidden;
+}
+
+.term__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.term__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border-hover);
+}
+
+.term__title {
+  margin-left: 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.term__body {
+  height: 300px;
+  padding: 0.9rem 1rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* react-console-emulator writes its default #212121 background inline
+   (dedicated background prop, applied over the style prop) — tokens must win */
+.term__body div[name^="react-console-emulator"] {
+  background: transparent !important;
+}
+
+.term__prompt {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.term__out {
+  color: var(--muted);
+}
+
+.term__hint {
+  color: var(--muted);
+  opacity: 0.75;
+}
+
+/* boot screen doubles as the skip button */
+.term__bootscreen {
+  all: unset;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font: inherit;
+  color: var(--text);
+}
+
+.term__bootscreen .Typewriter__cursor {
+  color: var(--accent);
+}
+
+/* quick-command chips */
+.term__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.term__chip {
+  font-family: inherit;
+  font-size: 0.7rem;
+  padding: 0.28rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+  background: var(--surface-2);
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.term__chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .term__body {
+    height: 250px;
+  }
+}
