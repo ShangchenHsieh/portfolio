@@ -23,9 +23,8 @@ export default function Home() {
 
             <Reveal as="p" delay={0.1} className="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-muted">
               Full-stack &amp; AI engineer based in San Jose. I build backend services, cloud
-              infrastructure, and applied-AI products — currently engineering{" "}
-              <span className="text-fg">KIRA at Bercerita</span> and researching earthquake
-              modeling at <span className="text-fg">San Jose State</span>.
+              infrastructure, and applied-AI products — currently pursuing a Master's degree in Computer Science at {" "}
+              <span className="text-fg">San Jose State University</span>.
             </Reveal>
 
             <Reveal delay={0.15} className="mt-9 flex flex-wrap items-center gap-3">

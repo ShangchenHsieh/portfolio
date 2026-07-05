@@ -13,8 +13,8 @@ const EXPERIENCES = [
     date: "Nov 2025 – Jan 2026",
     type: "work",
     description: [
-      "Cut quiz image load times by over 90% (2–3 s → ~150 ms) for users in Indonesia by implementing CloudFront caching.",
-      "Refactored the API codebase to modularize endpoints, improve readability, and simplify future feature work.",
+      "Cut quiz-image load times by 90%+ (2–3 s → ~150 ms) for users in Indonesia by adding CloudFront edge caching.",
+      "Refactored the API into modular endpoints, improving readability and accelerating future feature work.",
     ],
     images: [
       { src: kiraWholeTeam, caption: "The Bercerita team and partners" },
@@ -25,17 +25,17 @@ const EXPERIENCES = [
     date: "Sep 2025 – Dec 2025",
     type: "work",
     description:
-      "Supported the Computing Practice & Programming course — led discussion sections, ran code reviews, and paired with students to build practical coding skills.",
+      "Led discussion sections, code reviews, and pair-programming for the Computing Practice & Programming course, helping students build practical, job-ready coding skills.",
   },
   {
     title: "Research Assistant · San Jose State University",
-    date: "Jul 2025 – Present",
+    date: "Jul 2025 – AUG 2026",
     type: "work",
     note: "“Analysis of Energy Budgets as a Means of Comparing Modeled Subduction Zone Earthquakes at Cascadia and Sumatra”",
     description: [
-      "Model dynamic earthquake rupture with SeisSol, running large-scale simulations on high-performance computing clusters and visualizing results in ParaView.",
-      "Compare the energy budgets of modeled megathrust earthquakes across the Cascadia and Sumatra subduction zones.",
-      "Presented a research poster at the Seismological Society of America (SSA) Annual Meeting.",
+      "Model dynamic earthquake rupture in SeisSol, running large-scale simulations on high-performance computing clusters and visualizing results in ParaView.",
+      "Compare energy budgets of modeled megathrust earthquakes across the Cascadia and Sumatra subduction zones.",
+      "Presented a research poster at the 2026 Seismological Society of America (SSA) Annual Meeting.",
     ],
     images: [
       {
@@ -49,11 +49,11 @@ const EXPERIENCES = [
     date: "Apr 2025 – Aug 2025",
     type: "work",
     description: [
-      "Engineered and integrated core features for KIRA, a gamified English-learning platform, boosting engagement among Indonesian elementary students.",
-      "Ran Agile workflows across a team of 3 engineers, 1 designer, and 1 PM, reaching 70% product completion in 4 months.",
-      "Architected an agentic system driven by a state machine to autonomously generate AI-powered weekly quizzes.",
-      "Built a fully automated CI/CD pipeline with GitHub Actions, Docker, Amazon S3, and AWS Elastic Beanstalk — cutting deployment overhead by ~120 hours per quarter.",
-      "Deployed an email notification system on AWS SES to streamline user communication and improve retention.",
+      "Engineered and shipped core features for KIRA, a gamified English-learning platform, boosting engagement among Indonesian elementary students.",
+      "Drove Agile workflows across a team of 3 engineers, 1 designer, and 1 PM, reaching 70% product completion in 4 months.",
+      "Architected a state-machine-driven agentic system to autonomously generate AI-powered weekly quizzes.",
+      "Built a fully automated CI/CD pipeline with GitHub Actions, Docker, Amazon S3, and AWS Elastic Beanstalk, cutting deployment overhead by ~120 hours per quarter.",
+      "Deployed an email notification system on AWS SES, streamlining user communication and improving retention.",
     ],
     images: [
       { src: kiraTeam, caption: "Presenting “Intro to KIRA” with the Bercerita team" },
@@ -64,7 +64,7 @@ const EXPERIENCES = [
     date: "May 2025",
     type: "education",
     description:
-      "Bachelor's degree with a focus on software engineering and machine learning.",
+      "Bachelor's degree focused on software engineering and machine learning.",
   },
   {
     title: "Guest Speaker · International Gateways, SJSU",
@@ -78,8 +78,8 @@ const EXPERIENCES = [
     date: "Aug 2021 – May 2022",
     type: "work",
     description: [
-      "Designed a blog-posting system with REST APIs in Spring Boot, focused on scalability and efficient resource use.",
-      "Optimized MySQL queries for data management, improving query performance by 13%.",
+      "Built a blog-publishing system with REST APIs in Spring Boot, designed for scalability and efficient resource use.",
+      "Optimized MySQL queries, improving query performance by 13%.",
     ],
   },
 ];
