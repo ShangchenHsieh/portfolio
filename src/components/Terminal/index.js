@@ -1,11 +1,11 @@
 import { lazy, Suspense, useMemo, useRef, useState } from "react";
-import Typewriter from "typewriter-effect";
 import { useTheme } from "../../hooks/useTheme";
 import { createCommands } from "./commands";
 import resumePdf from "../../assets/files/Shangchen_Hsieh_Resume.pdf";
 import "./terminal.css";
 
 const ConsoleEmulator = lazy(() => import("react-console-emulator"));
+const Typewriter = lazy(() => import("typewriter-effect"));
 
 const CHIP_COMMANDS = ["help", "projects", "resume", "contact"];
 
@@ -124,6 +124,13 @@ export default function TerminalWindow() {
             onClick={() => setBooted(true)}
             aria-label="Skip intro animation"
           >
+            <Suspense
+              fallback={
+                <div>
+                  <span className="term__prompt">$</span> <span className="term__prompt">▍</span>
+                </div>
+              }
+            >
             <Typewriter
               options={{ delay: 26, cursor: "▍" }}
               onInit={(tw) =>
@@ -141,6 +148,7 @@ export default function TerminalWindow() {
                   .start()
               }
             />
+            </Suspense>
           </button>
         )}
       </div>

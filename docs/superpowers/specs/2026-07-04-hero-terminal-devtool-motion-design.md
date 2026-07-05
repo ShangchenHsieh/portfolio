@@ -1,7 +1,7 @@
 # Design: Hero Terminal + Dev-tool Motion Pass
 
 **Date:** 2026-07-04
-**Status:** Approved by Sean (design presented in brainstorming session; mockups selected in visual companion)
+**Status:** Implemented 2026-07-04 (see docs/superpowers/plans/2026-07-04-hero-terminal-devtool-motion.md). Bundle note: eager main grew 50.65 → 101.67 kB gz (motion runtime ≈ 29 kB — the cost accepted with the library-assisted decision); react-console-emulator (9.7 kB) and typewriter-effect (9.5 kB) load as lazy chunks.
 
 ## Problem
 
