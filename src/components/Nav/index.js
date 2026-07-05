@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 import "./nav.css";
 
@@ -55,6 +55,25 @@ export default function Nav() {
     return () => observer.disconnect();
   }, []);
 
+  const linksRef = useRef(null);
+  const [marker, setMarker] = useState({ x: 0, visible: false });
+
+  // Slide the amber marker under the active desktop link.
+  useEffect(() => {
+    const update = () => {
+      const nav = linksRef.current;
+      const link = nav?.querySelector('[data-active="true"]');
+      if (!link) {
+        setMarker((m) => ({ ...m, visible: false }));
+        return;
+      }
+      setMarker({ x: link.offsetLeft + link.offsetWidth / 2 - 3, visible: true });
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [activeSection]);
+
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -66,7 +85,7 @@ export default function Nav() {
             Sean Hsieh
           </a>
 
-          <nav className="site-nav__links" aria-label="Primary">
+          <nav className="site-nav__links" aria-label="Primary" ref={linksRef}>
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.id}
@@ -77,6 +96,12 @@ export default function Nav() {
                 {item.label}
               </a>
             ))}
+            <span
+              className="site-nav__marker"
+              data-visible={marker.visible}
+              style={{ transform: `translateX(${marker.x}px)` }}
+              aria-hidden="true"
+            />
           </nav>
 
           <div className="site-nav__right">

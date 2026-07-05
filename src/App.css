@@ -211,6 +211,7 @@ img {
 
 .btn-primary:hover {
   background: var(--accent-hover);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .btn-secondary {
@@ -309,6 +310,7 @@ img {
 .tag:hover {
   border-color: var(--accent);
   color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 /* small square tile holding an icon (contact rows) */
@@ -324,15 +326,47 @@ img {
   flex: none;
 }
 
-/* accent link with underline reveal */
+/* accent link: gutter '>' prompt + dashed→solid underline on hover */
 .link-accent {
+  position: relative;
   color: var(--accent);
   font-weight: 500;
   transition: color 0.18s ease;
 }
 
+.link-accent::before {
+  content: ">";
+  position: absolute;
+  left: -0.8em;
+  font-family: 'JetBrains Mono Variable', ui-monospace, monospace;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.link-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background-image: repeating-linear-gradient(90deg, var(--accent) 0 4px, transparent 4px 8px);
+  opacity: 0.4;
+  transition: opacity 0.18s ease;
+}
+
 .link-accent:hover {
   color: var(--accent-hover);
+}
+
+.link-accent:hover::before {
+  opacity: 1;
+}
+
+.link-accent:hover::after {
+  opacity: 1;
+  background-image: none;
+  background-color: var(--accent);
 }
 
 /* ============================================================
