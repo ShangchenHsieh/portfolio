@@ -14,6 +14,9 @@ const EXPERIENCES = [
       "Cut quiz image load times by over 90% (2–3 s → ~150 ms) for users in Indonesia by implementing CloudFront caching.",
       "Refactored the API codebase to modularize endpoints, improve readability, and simplify future feature work.",
     ],
+    images: [
+      { src: kiraWholeTeam, caption: "The Bercerita team and partners" },
+    ],
   },
   {
     title: "Teaching Assistant · San Jose State University",
@@ -52,7 +55,6 @@ const EXPERIENCES = [
     ],
     images: [
       { src: kiraTeam, caption: "Presenting “Intro to KIRA” with the Bercerita team" },
-      { src: kiraWholeTeam, caption: "The Bercerita team and partners" },
     ],
   },
   {

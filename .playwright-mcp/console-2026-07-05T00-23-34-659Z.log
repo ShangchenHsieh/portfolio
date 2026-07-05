@@ -1,0 +1,4 @@
+[    1456ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:3000/static/js/bundle.js:30619
+[    1486ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:3000/logo192.png (Download error or resource isn't a valid image) @ http://localhost:3000/:0
+[    1489ms] [LOG] %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit @ https://va.vercel-scripts.com/v1/script.debug.js:0
+[    1490ms] [LOG] %c[Vercel Web Analytics]%c Page view would be ignored by `beforeSend` because null was returned. color: rgb(120, 120, 120) color: inherit {type: pageview, url: http://localhost:3000/, payload: undefined} @ https://va.vercel-scripts.com/v1/script.debug.js:0
