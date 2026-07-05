@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../../App.css";
+import SectionHeader from "../SectionHeader";
+import { Reveal } from "../../motion/variants";
 
 const EMAIL = "shang-chen.hsieh@sjsu.edu";
 const LINKEDIN = "https://www.linkedin.com/in/shang-chen-hsieh-598167222/";
@@ -41,23 +43,17 @@ export default function Contact() {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <header className="mb-12 max-w-2xl">
-          <p className="eyebrow" data-aos="fade-up">Contact</p>
-          <h2
-            className="mt-4 font-semibold tracking-[-0.02em] text-[clamp(1.9rem,4vw,2.75rem)]"
-            data-aos="fade-up"
-          >
-            Get in touch
-          </h2>
-          <p className="mt-4 text-muted leading-relaxed" data-aos="fade-up">
-            Open to software engineering roles and interesting projects. Send a note below or reach
-            me directly — I usually reply within a day or two.
-          </p>
-        </header>
+        <SectionHeader
+          index="05"
+          eyebrow="Contact"
+          title="Get in touch"
+          lede="Open to software engineering roles and interesting projects. Send a note below or reach me directly — I usually reply within a day or two."
+        />
 
         <div className="grid lg:grid-cols-[1fr_minmax(0,320px)] gap-8 lg:gap-12 items-start">
           {/* Form */}
-          <form onSubmit={handleSubmit} className="card p-6 sm:p-7 space-y-5" data-aos="fade-up">
+          <Reveal>
+          <form onSubmit={handleSubmit} className="card p-6 sm:p-7 space-y-5">
             <div className="grid sm:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <label htmlFor="username" className="label">Name</label>
@@ -127,9 +123,10 @@ export default function Contact() {
               )}
             </div>
           </form>
+          </Reveal>
 
           {/* Direct links */}
-          <div className="space-y-3" data-aos="fade-up" data-aos-delay="80">
+          <Reveal delay={0.08} className="space-y-3">
             <p className="label">Or reach me directly</p>
             <a href={`mailto:${EMAIL}`} className="card card-hover flex items-center gap-3 p-4">
               <span className="icon-tile"><MailIcon /></span>
@@ -145,7 +142,7 @@ export default function Contact() {
                 <span className="block mono text-xs text-muted truncate">in/shang-chen-hsieh</span>
               </span>
             </a>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

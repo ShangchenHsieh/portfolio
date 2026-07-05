@@ -145,3 +145,12 @@ export const certificates = [
     viewLink: null,
   }
 ];
+
+export const focusAreas = [
+  "Backend & APIs",
+  "Full-stack Development",
+  "AWS / Cloud",
+  "CI/CD & DevOps",
+  "AI / ML Integration",
+  "Databases",
+];

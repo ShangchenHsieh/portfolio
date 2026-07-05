@@ -37,6 +37,9 @@ export default function Footer() {
       </div>
       <div className="container pb-8">
         <p className="mono text-xs text-muted">
+          <span className="text-accent">$</span> echo "thanks for scrolling"
+        </p>
+        <p className="mono text-xs text-muted mt-2">
           © {new Date().getFullYear()} Shang-chen Hsieh — built with React.
         </p>
       </div>
