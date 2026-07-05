@@ -81,7 +81,7 @@ export default function TerminalWindow() {
                   </div>
                 )
               )}
-              <div className="term__hint">// type 'help' to explore — or just scroll</div>
+              <div className="term__hint"> type 'help' to explore — or just scroll</div>
             </div>
 
             <div aria-live="polite">
