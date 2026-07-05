@@ -151,6 +151,24 @@ img {
   color: var(--muted);
 }
 
+/* dev-tool texture: mono section index + blinking cursor block */
+.eyebrow-index {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 0.5em;
+  height: 1.05em;
+  background: var(--accent);
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  50% { opacity: 0; }
+}
+
 /* accent square used inline as the recurring motif */
 .marker {
   display: inline-block;
