@@ -3,42 +3,28 @@ import { projects } from "../../constants";
 
 export default function Projects() {
   return (
-    <div
-      id="projects"
-      className="section-container min-h-screen px-8 md:px-12 lg:px-16"
-    >
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
+    <section id="projects" className="section">
+      <div className="container">
+        <header className="mb-12 max-w-2xl">
+          <p className="eyebrow" data-aos="fade-up">Projects</p>
           <h2
-            className="head text-5xl md:text-6xl font-bold mb-6"
+            className="mt-4 font-semibold tracking-[-0.02em] text-[clamp(1.9rem,4vw,2.75rem)]"
             data-aos="fade-up"
           >
-            Featured <span className="gradient-text">Projects</span>
+            Selected work
           </h2>
-          <div
-            className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 mx-auto rounded-full mb-6 shadow-lg"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          ></div>
-          <p
-            className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            A showcase of my recent work, featuring full-stack applications,
-            machine learning projects, and innovative solutions built with modern technologies.
+          <p className="mt-4 text-muted leading-relaxed" data-aos="fade-up">
+            Full-stack applications and applied-AI tools I've built — from an educational platform
+            for classrooms to a course-lookup service used by students at SJSU.
           </p>
-        </div>
+        </header>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
               data-aos="fade-up"
-              data-aos-delay={index * 100}
-              data-aos-duration="800"
+              data-aos-delay={Math.min((index % 3) * 80, 240)}
               className="h-full"
             >
               <Work
@@ -52,37 +38,7 @@ export default function Projects() {
             </div>
           ))}
         </div>
-
-        {/* Call to Action */}
-        <div
-          className="text-center mt-16"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          <div className="modern-card inline-block">
-            <h3 className="text-2xl font-bold mb-4">
-              Interested in <span className="gradient-text">collaborating</span>?
-            </h3>
-            <p className="text-zinc-400 mb-6 max-w-md">
-              I'm always open to discussing new opportunities and exciting projects.
-            </p>
-            <a
-              href="#contact"
-              className="btn-primary inline-flex items-center gap-2 group"
-            >
-              <span>Get In Touch</span>
-              <svg
-                className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 }

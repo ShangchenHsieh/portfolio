@@ -8,10 +8,10 @@ class Layout extends React.Component {
         const Aos = aosModule.default;
 
         Aos.init({
-          duration: 800,
-          easing: 'ease-out-cubic',
+          duration: 500,
+          easing: "ease-out",
           once: true,
-          offset: 50,
+          offset: 40,
         });
       });
     };
@@ -25,14 +25,9 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className="page">
-          <div className="flex flex-row overflow-hidden">
-            {this.props.children}
-          </div>
-          <div className="cursor"></div>
-        </div>
-      </React.Fragment>
+      <div className="page">
+        {this.props.children}
+      </div>
     );
   }
 }

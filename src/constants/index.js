@@ -57,12 +57,12 @@ export const projects = [
       },
     ],
     img: nexGen,
-    link: "https://https://nexgen-ai-cover-letter-generator-195913554814.us-central1.run.app/",
-    code: "https://https://nexgen-ai-cover-letter-generator-195913554814.us-central1.run.app/",
+    link: "https://nexgen-ai-cover-letter-generator-195913554814.us-central1.run.app/",
+    code: "",
   },
   {
     title: "Nimbus Cloud Banking",
-    desc: "Germany City+ is a travel planning Dash app for exploring Germany, providing personalized recommendations using KMeans-clustering model and AI algorithms.",
+    desc: "A cloud banking app with account management and transactions, built on a Django backend with AWS RDS and a Vite frontend.",
     tags: [
       {
         name: "Django",

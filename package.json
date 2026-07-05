@@ -6,6 +6,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@lottiefiles/lottie-player": "^2.0.2",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.1",
