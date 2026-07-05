@@ -30,3 +30,6 @@ yarn-error.log*
 
 # brainstorming companion sessions
 .superpowers/
+
+# playwright artifacts
+.playwright-mcp/
