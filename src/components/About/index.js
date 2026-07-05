@@ -2,24 +2,18 @@ import "../../App.css";
 import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf";
 import portrait from "../../assets/images/MyImage.jpg";
 import { focusAreas } from "../../constants";
+import SectionHeader from "../SectionHeader";
+import { Reveal } from "../../motion/variants";
 
 export default function About() {
   return (
     <section id="about" className="section">
       <div className="container">
-        <header className="mb-12">
-          <p className="eyebrow" data-aos="fade-up">About</p>
-          <h2
-            className="mt-4 font-semibold tracking-[-0.02em] text-[clamp(1.9rem,4vw,2.75rem)]"
-            data-aos="fade-up"
-          >
-            Who I am
-          </h2>
-        </header>
+        <SectionHeader index="01" eyebrow="About" title="Who I am" />
 
         <div className="grid lg:grid-cols-[minmax(0,300px)_1fr] gap-10 lg:gap-16 items-start">
           {/* Portrait */}
-          <div data-aos="fade-up">
+          <Reveal>
             <div className="card overflow-hidden">
               <img
                 src={portrait}
@@ -31,10 +25,10 @@ export default function About() {
             <p className="mono text-xs text-muted mt-3">
               Shang-chen (Sean) Hsieh · San Jose, CA
             </p>
-          </div>
+          </Reveal>
 
           {/* Bio */}
-          <div data-aos="fade-up" data-aos-delay="80">
+          <Reveal delay={0.08}>
             <div className="space-y-5 text-lg leading-relaxed text-muted max-w-2xl">
               <p>
                 I'm a software engineer who recently earned a{" "}
@@ -73,7 +67,7 @@ export default function About() {
                 Download résumé
               </a>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

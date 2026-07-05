@@ -1,6 +1,8 @@
 import "../../App.css";
 import resume from "../../assets/files/Shangchen_Hsieh_Resume.pdf";
 import PhotoThumbs from "../Lightbox";
+import SectionHeader from "../SectionHeader";
+import { Reveal } from "../../motion/variants";
 import researchPoster from "../../assets/images/research_assistant_poster.JPG";
 import kiraTeam from "../../assets/images/kira_team_picture.jpg";
 import kiraWholeTeam from "../../assets/images/kira_whole_team_picture.jpg";
@@ -88,24 +90,16 @@ export default function Resume() {
   return (
     <section id="resume" className="section">
       <div className="container">
-        <header className="mb-12">
-          <p className="eyebrow" data-aos="fade-up">Experience</p>
-          <h2
-            className="mt-4 font-semibold tracking-[-0.02em] text-[clamp(1.9rem,4vw,2.75rem)]"
-            data-aos="fade-up"
-          >
-            Experience &amp; education
-          </h2>
-        </header>
+        <SectionHeader index="02" eyebrow="Experience" title="Experience & education" />
 
         <div className="max-w-3xl">
           <ol className="relative border-l border-line ml-1.5">
             {EXPERIENCES.map((exp, index) => (
-              <li
+              <Reveal
+                as="li"
                 key={index}
+                delay={Math.min(index * 0.06, 0.24)}
                 className="relative pl-7 sm:pl-9 pb-11 last:pb-0"
-                data-aos="fade-up"
-                data-aos-delay={Math.min(index * 60, 240)}
               >
                 <span
                   className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-[2px] bg-accent"
@@ -137,7 +131,7 @@ export default function Resume() {
                 )}
 
                 {exp.images && <PhotoThumbs photos={exp.images} />}
-              </li>
+              </Reveal>
             ))}
           </ol>
 
