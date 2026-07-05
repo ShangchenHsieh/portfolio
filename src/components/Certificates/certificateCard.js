@@ -1,6 +1,6 @@
 export default function CertificateCard({ title, issuer, date, tags, img, downloadLink, viewLink }) {
   return (
-    <article className="card card-hover h-full flex flex-col p-5">
+    <article className="card card-hover card-corners h-full flex flex-col p-5">
       <div className="flex items-center justify-between gap-3">
         <img src={img} alt={issuer} loading="lazy" className="h-7 w-auto object-contain" />
         <span className="mono text-xs text-muted">{date}</span>

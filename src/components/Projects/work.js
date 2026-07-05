@@ -1,15 +1,16 @@
-export default function Work({ title, desc, tags, link, code, img }) {
+export default function Work({ index, title, desc, tags, link, code, img }) {
   const hasLive = link && link.startsWith("http");
   const hasCode = code && code.startsWith("http") && code !== link;
 
   return (
-    <article className="card card-hover h-full flex flex-col overflow-hidden">
+    <article className="card card-hover card-corners h-full flex flex-col overflow-hidden">
       <div className="aspect-[16/10] overflow-hidden border-b border-line bg-elevated">
         <img src={img} alt={title} loading="lazy" className="w-full h-full object-cover" />
       </div>
 
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-base font-semibold text-fg">{title}</h3>
+        <span className="card-idx" aria-hidden="true">{index}</span>
+        <h3 className="mt-1 text-base font-semibold text-fg">{title}</h3>
         <p className="mt-2 text-sm leading-relaxed text-muted flex-1">{desc}</p>
 
         <div className="mt-4 flex flex-wrap gap-1.5">
