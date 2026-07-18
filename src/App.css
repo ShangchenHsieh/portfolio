@@ -71,10 +71,25 @@ body {
 
 h1, h2, h3, h4 {
   color: var(--text);
+  font-family: 'Bricolage Grotesque Variable', 'Inter Variable', ui-sans-serif,
+    system-ui, sans-serif;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  font-optical-sizing: auto;
   margin: 0;
+}
+
+/* Display face carries the identity; give the big moments a touch more weight
+   and tighter tracking so Bricolage reads confident, not decorative. */
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-weight: 650;
+  letter-spacing: -0.03em;
 }
 
 p {
@@ -104,6 +119,13 @@ img {
 
 .section {
   padding-block: clamp(4rem, 9vw, 6.5rem);
+}
+
+/* Alternating full-bleed band — gives the long scroll a beat instead of one
+   flat plane. Uses the surface token, so it reads as rhythm, not decoration. */
+.section-alt {
+  background: var(--surface);
+  border-block: 1px solid var(--border);
 }
 
 .rule {

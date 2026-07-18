@@ -88,7 +88,7 @@ const STRENGTHS = ["Problem-solving", "Collaboration", "Communication", "Ownersh
 
 export default function Resume() {
   return (
-    <section id="resume" className="section">
+    <section id="resume" className="section section-alt">
       <div className="container">
         <SectionHeader index="02" eyebrow="Experience" title="Experience & education" />
 

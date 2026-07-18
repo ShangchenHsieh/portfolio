@@ -16,6 +16,13 @@ module.exports = {
         onaccent: "var(--accent-contrast)",
       },
       fontFamily: {
+        display: [
+          "Bricolage Grotesque Variable",
+          "Inter Variable",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
         sans: [
           "Inter Variable",
           "ui-sans-serif",

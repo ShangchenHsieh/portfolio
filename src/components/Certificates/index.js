@@ -5,7 +5,7 @@ import { Stagger, StaggerItem } from "../../motion/variants";
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="section">
+    <section id="certificates" className="section section-alt">
       <div className="container">
         <SectionHeader
           index="04"

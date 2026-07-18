@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import Home from "./Home";
 import Footer from "./Footer";
 import "../App.css";
@@ -9,34 +9,12 @@ const Projects = lazy(() => import("./Projects"));
 const Certificates = lazy(() => import("./Certificates"));
 const Contact = lazy(() => import("./Contact"));
 
-function LazySection({ id, Component }) {
-  const [shouldRender, setShouldRender] = useState(false);
-  const placeholderRef = useRef(null);
-
-  useEffect(() => {
-    if (shouldRender || !placeholderRef.current) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setShouldRender(true);
-          }
-        });
-      },
-      { root: null, rootMargin: "400px 0px", threshold: 0.01 }
-    );
-
-    observer.observe(placeholderRef.current);
-    return () => observer.disconnect();
-  }, [shouldRender]);
-
-  if (!shouldRender) {
-    return <div id={id} ref={placeholderRef} className="section" aria-hidden="true" />;
-  }
-
+// Sections are code-split (lazy chunks) but mounted immediately, not gated on
+// scroll. Deferring the *mount* left the DOM empty for crawlers, link/social
+// previews, and fast scrollers; code-splitting alone keeps the perf win without
+// that cost. Each id anchor lives on the section itself so scroll-spy/anchors
+// resolve even before its chunk resolves.
+function DeferredSection({ id, Component }) {
   return (
     <Suspense fallback={<div id={id} className="section" aria-hidden="true" />}>
       <Component />
@@ -48,11 +26,11 @@ export default function Display() {
   return (
     <main>
       <Home />
-      <LazySection id="about" Component={About} />
-      <LazySection id="resume" Component={Resume} />
-      <LazySection id="projects" Component={Projects} />
-      <LazySection id="certificates" Component={Certificates} />
-      <LazySection id="contact" Component={Contact} />
+      <DeferredSection id="about" Component={About} />
+      <DeferredSection id="resume" Component={Resume} />
+      <DeferredSection id="projects" Component={Projects} />
+      <DeferredSection id="certificates" Component={Certificates} />
+      <DeferredSection id="contact" Component={Contact} />
       <Footer />
     </main>
   );
